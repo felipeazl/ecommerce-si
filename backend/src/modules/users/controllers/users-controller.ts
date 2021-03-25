@@ -1,6 +1,6 @@
 import { classToClass } from 'class-transformer';
 import { Request, Response } from 'express';
-import CreateUsersService from '../services/CreateUsersService';
+import CreateUsersService from '../services/create-users-service';
 
 class UsersController {
   public async create(req: Request, res: Response): Promise<Response> {
