@@ -1,5 +1,7 @@
-.idea/
-.vscode/
-node_modules/
+node_modules
 dist/
 .env
+.env.ts
+.idea/
+.vscode/
+ormconfig.json
