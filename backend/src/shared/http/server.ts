@@ -6,7 +6,7 @@ import cors from 'cors';
 import { errors } from 'celebrate';
 import AppError from '../errors/AppError';
 import '../typeorm';
-import routes from '../routes';
+import routes from './routes';
 const app = express();
 
 app.use(cors());
