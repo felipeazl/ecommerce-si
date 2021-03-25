@@ -26,7 +26,7 @@ class LoginSessionService {
     const passwordCompare = await compare(password, user.password);
     if (!passwordCompare) throw new AppError('User or password not found.');
 
-    const secret = process.env.APP_TOKEN || '';
+    const secret = process.env.JWT_SECRET || '';
 
     const token = sign({}, secret, {
       subject: user.id,
