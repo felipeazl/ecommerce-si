@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/almakad/ecommerce-si.git",
   "author": "Carlos Rodrigues, Felipe Kucharski, Felipe Louzada, Felipe Saadi",
-  "license": "",
+  "license": "GPL-3.0 License",
   "scripts": {
     "lint-fix": "eslint . --ext .ts --fix",
     "lint": "yarn lint-fix &&  eslint . --ext .ts"
