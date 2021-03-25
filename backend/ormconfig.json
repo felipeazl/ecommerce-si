@@ -4,7 +4,7 @@
   "port": 5432,
   "username": "postgres",
   "password": "Cdftm@c@256252",
-  "database": "apivendas",
+  "database": "ecommercesi",
   "entities": ["./src/modules/**/typeorm/entities/*.ts"],
   "migrations": [
     "./src/shared/typeorm/migrations/*.ts"
