@@ -14,7 +14,7 @@ interface IUserResponse {
   user: User;
   token: string;
 }
-class CreateSessionsServices {
+class CreateSessionsService {
   public async execute({
     email,
     password,
@@ -40,4 +40,4 @@ class CreateSessionsServices {
   }
 }
 
-export default CreateSessionsServices;
+export default CreateSessionsService;
