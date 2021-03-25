@@ -6,7 +6,7 @@ import cors from 'cors';
 import 'dotenv/config';
 import '../typeorm';
 import AppError from '../errors/app-errors';
-import routes from './routes/router';
+import routes from './routes';
 
 const app = express();
 

@@ -2,7 +2,7 @@ import { classToClass } from 'class-transformer';
 import { Request, Response } from 'express';
 import CreateUsersService from '../services/CreateUsersService';
 
-class CreateUsersController {
+class UsersController {
   public async create(req: Request, res: Response): Promise<Response> {
     const { name, email, password } = req.body;
 
@@ -13,4 +13,4 @@ class CreateUsersController {
     return res.status(201).json(classToClass(user));
   }
 }
-export default CreateUsersController;
+export default UsersController;
