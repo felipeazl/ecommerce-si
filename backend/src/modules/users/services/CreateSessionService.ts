@@ -1,5 +1,6 @@
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
+import 'dotenv/config';
 import { getCustomRepository } from 'typeorm';
 import AppError from '../../../shared/errors/AppError';
 import User from '../typeorm/entities/User';
@@ -29,7 +30,7 @@ class CreateSessionsService {
 
     if (!passwordCompare) throw new AppError('Incorrect password', 401);
 
-    const token = sign({}, 'secret', {
+    const token = sign({}, process.env.JWT_SECRET || '', {
       subject: user.id,
       expiresIn: '1d',
     });
