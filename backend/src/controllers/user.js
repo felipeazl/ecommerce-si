@@ -1,9 +1,11 @@
 import { hash } from 'bcryptjs'
 import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
 
 import User from '../models/user'
 import { notFound } from '../errors/index'
 
+dotenv.config()
 
 export const updateLastLogin = async (email) => {
   const user = await User.findOne({ email })
@@ -65,7 +67,7 @@ export const userLogin = async (req, res) => {
     return notFound(res, 'User')
   }
   updateLastLogin(user.email)
-  const token = jwt.sign({}, 'secret', { subject: user.id, expiresIn: '1d' })
+  const token = jwt.sign({}, process.env.SECRET_KEY, { subject: user.id, expiresIn: '1d' })
 
   return res.status(200).json({
     user,
