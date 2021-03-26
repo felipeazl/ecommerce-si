@@ -1,5 +1,18 @@
 import { hash } from 'bcryptjs'
+import jwt from 'jsonwebtoken'
+
 import User from '../models/user'
+import { notFound } from '../errors/index'
+
+
+export const updateLastLogin = async (email) => {
+  const user = await User.findOne({ email })
+  if (user) {
+    user.lastLogin = new Date()
+    await user.save()
+  }
+}
+
 
 export const createUser = async (req, res) => {
   const { name, email, password } = req.body
@@ -19,6 +32,7 @@ export const createUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      lastLogin: new Date(),
       created_at: new Date(),
       updated_at: new Date(),
     })
@@ -35,4 +49,28 @@ export const createUser = async (req, res) => {
   return res.status(400).json({
       msg: '{name}(String), {email}(String), {notifications}(Boolean) and {password}(String) are required'
     })
+}
+
+export const userLogin = async (req, res) => {
+  const { email, password } = req.body
+
+  const user = await User.findOne({ email })
+
+  if (!user) {
+    return notFound(res, 'User')
+  }
+
+  const passwdVerify = hash(password, user.password)
+  if (!passwdVerify) {
+    return notFound(res, 'User')
+  }
+  updateLastLogin(user.email)
+  const token = jwt.sign({}, 'secret', { subject: user.id, expiresIn: '1d' })
+
+  return res.status(200).json({
+    user,
+    token
+  })
+
+
 }
