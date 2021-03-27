@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 
 import User from '../models/user'
-import { notFound } from '../errors/index'
+import { notFound } from '../../../shared/errors/index'
 
 dotenv.config()
 
