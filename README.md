@@ -10,13 +10,10 @@
   <a href="https://stats.uptimerobot.com/5PXmCNLM" title="Uptimerobot">
     <img src="https://img.shields.io/uptimerobot/ratio/m778918918-3e92c097147760ee39d02d36.svg" alt="Uptimerobot">
   </a>
-  <a href="https://github.com/marciovsena/abibliadigital/blob/dev/LICENSE" title="license">
+  <a href="https://github.com/almakad/ecommerce-si/blob/main/LICENSE" title="license">
     <img src="https://badgen.net/badge/license/BSD/blue" alt="BSD License">
   </a>
-  <a href="https://codeclimate.com/github/marciovsena/abibliadigital/maintainability"><img
-      src="https://api.codeclimate.com/v1/badges/2cf1c4940336ad7911be/maintainability" /></a>
-  <a href="https://discord.gg/Te3fkHg"><img
-      src="https://img.shields.io/discord/722477891102834789.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" /></a>
+  
 </p>
 
 ## ► Table of Contents
