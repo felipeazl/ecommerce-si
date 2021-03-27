@@ -22,7 +22,7 @@ export const createUser = async (req, res) => {
   const userExists = await User.findOne({ email })
 
   if (userExists) {
-    await saveRequest(req)
+    // await saveRequest(req)
     return res.status(400).json({
       msg: 'Usuário já cadastrado'
     })
