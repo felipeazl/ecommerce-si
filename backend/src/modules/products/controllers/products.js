@@ -6,11 +6,12 @@ import Product from '../models/product'
 export const createProduct = async (req, res) => {
   const {
     name,
+    description,
     price,
     quantity
   } = req.body
 
-  if (!name || !price || !quantity) {
+  if (!name || !description || !price || !quantity ) {
     return res.status(401).json({
       error: 'error',
       message: "Can't be blank"
@@ -28,17 +29,25 @@ export const createProduct = async (req, res) => {
 
   const product = await Product.create({
     name,
+    description,
     price,
-    quantity
+    quantity,
   })
 
   return res.status(201).json({
     id: product._id,
+    description: product.description,
     name: product.name,
     price: product.price,
-    quantity: product.price,
+    quantity: product.price
   })
 
+}
+export const getProductsList = async (req, res) => {
+
+  const product = await Product.find()
+
+  return res.status(200).json(product)
 }
 
 export const searchProduct = async (req, res) => {

@@ -1,13 +1,13 @@
 import express from 'express'
 
-import { createProduct, searchProduct } from '../controllers/products'
+import { createProduct, searchProduct, getProductsList } from '../controllers/products'
 
 import isAuthenticated from '../../../shared/http/middlewares/isAuthenticated'
 
-
 const productsRoute = express.Router()
 
-productsRoute.post('/', isAuthenticated, createProduct)
-productsRoute.post('/:name', searchProduct)
+productsRoute.get('/:name', searchProduct)
+productsRoute.get('/', getProductsList)
 
+productsRoute.post('/', isAuthenticated, createProduct)
 export default productsRoute;
