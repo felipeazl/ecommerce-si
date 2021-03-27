@@ -45,11 +45,6 @@ SECRET_KEY=""
 - Visit `localhost:3000/api/check` to see the running api!
 - Visit https://ecommercesi.herokuapp.com/api-docs/ to try a few features
 
-
-## Setup using Docker
-
-If you do not want to install Mongo, Redis, Node and Yarn, follow these steps.
-
 ### Steps
 
 - Create `.env` file:
@@ -64,7 +59,7 @@ SECRET_KEY=""
 
 ## Rate Limit
 
-- This API has a limiter to prevent BruteForce to our routes
+- This API has a limit to prevent brute force or overloading
 
 ## Contributor
 
