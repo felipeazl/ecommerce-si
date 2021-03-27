@@ -1,0 +1,11 @@
+{
+  "name": "ecommerce-si",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/almakad/ecommerce-si.git",
+  "author": "Carlos Rodrigues, Felipe, Felipe, Felipe",
+  "license": "GPL-3.0",
+  "scripts": {
+    "backend": "cd ./backend && yarn dev"
+  }
+}
