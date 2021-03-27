@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://stats.uptimerobot.com/5PXmCNLM" title="Uptimerobot">
+  <a href="#" title="Uptimerobot">
     <img src="https://img.shields.io/uptimerobot/ratio/m778918918-3e92c097147760ee39d02d36.svg" alt="Uptimerobot">
   </a>
   <a href="https://github.com/almakad/ecommerce-si/blob/main/LICENSE" title="license">
