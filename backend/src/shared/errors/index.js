@@ -14,6 +14,6 @@ export const notFound = (res, type) => {
 
 export const notAuthorized = (res) => {
   return res.status(403).json({
-    msg: 'Not authorized token'
+    msg: 'You are not authorized'
   })
 }

@@ -3,8 +3,8 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
-import router from './routes'
-import setupSwagger from './docs/config-swagger'
+import router from './shared/http/routes'
+import setupSwagger from './shared/docs/config-swagger'
 
 
 dotenv.config()

@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 
 import User from '../models/user'
-import { notFound } from '../errors/index'
+import { notFound } from '../../../shared/errors/index'
 
 dotenv.config()
 
@@ -22,7 +22,7 @@ export const createUser = async (req, res) => {
   const userExists = await User.findOne({ email })
 
   if (userExists) {
-    await saveRequest(req)
+    // await saveRequest(req)
     return res.status(400).json({
       msg: 'Usuário já cadastrado'
     })
