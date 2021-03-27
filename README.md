@@ -66,13 +66,7 @@ SECRET_KEY=""
 
 ## Rate Limit
 
-- Without authentication the limit rate is 20 requests/hour/ip
-- With user token, requests are unlimited (it's free)
-
-## Contributing
-
-Contributions, issues and feature requests are very welcome.
-Please make sure to read the [Contributing Guide](/CONTRIBUTING.md) before making a pull request.
+- This API has a limiter to prevent BruteForce to our routes
 
 ## Contributor
 
