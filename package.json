@@ -6,6 +6,6 @@
   "author": "Carlos Rodrigues, Felipe, Felipe, Felipe",
   "license": "GPL-3.0",
   "scripts": {
-    "backend": "cd ./backend && yarn dev"
+    "dev:backend": "cd ./backend && yarn dev"
   }
 }
