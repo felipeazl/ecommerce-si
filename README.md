@@ -52,7 +52,6 @@ If you do not want to install Mongo, Redis, Node and Yarn, follow these steps.
 
 ### Steps
 
-- Download this source code into a working directory. (Keep the directory name as "abibliadigital")
 - Create `.env` file:
 
 ```
@@ -61,7 +60,6 @@ NODE_ENV="development"
 SECRET_KEY=""
 ```
 
-- Run the project using the following command: `docker-compose up`
 - Visit `localhost:3000/api/check` to see the running api!
 
 ## Rate Limit
