@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 
 import User from '../models/user'
-import { notFound } from '../../../shared/errors/index'
+import { notFound, notAuthorized } from '../../../shared/errors/index'
 
 dotenv.config()
 
@@ -34,6 +34,7 @@ export const createUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      isActived: false,
       lastLogin: new Date(),
       created_at: new Date(),
       updated_at: new Date(),
@@ -65,6 +66,9 @@ export const userLogin = async (req, res) => {
   const passwdVerify = hash(password, user.password)
   if (!passwdVerify) {
     return notFound(res, 'User')
+  }
+  if (user.isActivated === false || user.isActivated === undefined) {
+    return notAuthorized(res, 'User')
   }
   updateLastLogin(user.email)
   const token = jwt.sign({}, process.env.SECRET_KEY, { subject: user.id, expiresIn: '1d' })
