@@ -22,12 +22,12 @@ export default {
     url: '/'
   }],
   tags: [{
-    name: 'Login'
+    name: 'Customer Login'
   }
 ],
   paths: {
-    '/users/login': loginPath,
-    '/users/signup': signUpPath
+    '/customers/login': loginPath,
+    '/customers/signup': signUpPath
   },
   schemas: {
     error: errorSchema,

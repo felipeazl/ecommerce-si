@@ -9,6 +9,7 @@ import {
   createUser,
   userLogin
 } from '../controllers/user'
+import isAuthenticated from '../../../shared/http/middlewares/isAuthenticated'
 import loginAccountLimiter from '../controllers/rateLimit'
 
 
@@ -20,7 +21,7 @@ usersRoute.post('/users/signup', celebrate({
     email: Joi.string().email().required(),
     password: Joi.string().required(),
   }
-}), createUser)
+}), isAuthenticated, createUser)
 usersRoute.post('/users/login', celebrate({
   [Segments.BODY]: {
     email: Joi.string().email().required(),
