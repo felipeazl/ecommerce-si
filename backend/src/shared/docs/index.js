@@ -23,10 +23,6 @@ export default {
   }],
   tags: [{
     name: 'Login'
-  },
-  {
-    name: 'Tools'
-
   }
 ],
   paths: {
