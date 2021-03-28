@@ -5,13 +5,13 @@ import Product from '../models/product'
 
 export const createProduct = async (req, res) => {
   const {
-    name,
+    title,
     description,
     price,
     quantity
   } = req.body
 
-  if (!name || !description || !price || !quantity ) {
+  if (!title || !description || !price || !quantity ) {
     return res.status(401).json({
       error: 'error',
       message: "Can't be blank"
@@ -19,7 +19,7 @@ export const createProduct = async (req, res) => {
   }
 
   const productExists = await Product.findOne({
-    name
+    title
   })
   if (productExists) {
     return res.status(400).json({
@@ -28,7 +28,7 @@ export const createProduct = async (req, res) => {
   }
 
   const product = await Product.create({
-    name,
+    title,
     description,
     price,
     quantity,
@@ -37,7 +37,7 @@ export const createProduct = async (req, res) => {
   return res.status(201).json({
     id: product._id,
     description: product.description,
-    name: product.name,
+    title: product.title,
     price: product.price,
     quantity: product.price
   })
@@ -52,16 +52,16 @@ export const getProductsList = async (req, res) => {
 
 export const searchProduct = async (req, res) => {
   const {
-    name
+    title
   } = req.params
 
-  if (!name) {
+  if (!title) {
     return notFound(res, 'Product')
   }
 
   const product = await Product.find({
-    "name": {
-      '$regex': '.*' + name + '.*'
+    "title": {
+      '$regex': '.*' + title + '.*'
     }
   })
 
