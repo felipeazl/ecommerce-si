@@ -5,7 +5,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import router from './shared/http/routes'
 import setupSwagger from './shared/docs/config-swagger'
-
+import { errors } from 'celebrate'
 
 dotenv.config()
 
@@ -25,6 +25,7 @@ app.use(express.json())
 
 setupSwagger(app)
 app.use(router)
+app.use(errors())
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(
