@@ -62,12 +62,12 @@ export const customerLogin = async (req, res) => {
     return notFound(res, 'Customer')
   }
 
-  const passwdVerify = hash(password, user.password)
+  const passwdVerify = hash(password, customer.password)
   if (!passwdVerify) {
     return notFound(res, 'Customer')
   }
-  updateLastLogin(user.email)
-  const token = jwt.sign({}, process.env.SECRET_KEY, { subject: user.id, expiresIn: '1d' })
+  updateLastLogin(customer.email)
+  const token = jwt.sign({}, process.env.CUSTOMER_KEY, { subject: customer.id, expiresIn: '1d' })
 
   return res.status(200).json({
     id: customer._id,
