@@ -22,7 +22,7 @@ export default {
     url: '/'
   }],
   tags: [{
-    name: 'Customer Login'
+    name: 'Customers Login'
   }
 ],
   paths: {
