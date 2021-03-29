@@ -2,12 +2,11 @@ header {
     height: 120px;
     padding: 0px;
     background: #fff;
-    border: 1px solid black;
     font-family: "Inter", sans-serif;
 }
 .logo {
-    padding: 5px 10px;
-    width: 7%;
+    padding: 5px 15px;
+    width: 6%;
     float: left;
 }
 #menu ul {
@@ -21,7 +20,7 @@ header {
     display: inline; 
 }
 #menu ul li a {
-    font-size: 25px;
+    font-size: 20px;
     padding: 0px 50px;
     color: black;
     text-decoration: none;
@@ -51,4 +50,9 @@ header {
 }
 #user ul li a:first-child::before{
     content: none;
+}
+.carrinho {
+    width: 2%;
+    margin-left: 650px;
+    margin-top: 15px;
 }
