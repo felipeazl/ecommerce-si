@@ -1,4 +1,4 @@
-import { hash } from 'bcryptjs'
+import { hash, compare } from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 
@@ -63,9 +63,11 @@ export const userLogin = async (req, res) => {
     return notFound(res, 'User')
   }
 
-  const passwdVerify = hash(password, user.password)
+  const passwdVerify = await compare(password, user.password)
   if (!passwdVerify) {
-    return notFound(res, 'User')
+    return res.status(401).json({
+      error: 'Wrong password'
+    })
   }
   if (user.isActivated === false || user.isActivated === undefined) {
     return notAuthorized(res, 'User')

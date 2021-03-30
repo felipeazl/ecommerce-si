@@ -1,4 +1,4 @@
-import { hash } from 'bcryptjs'
+import { compare, hash } from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 
@@ -62,9 +62,11 @@ export const customerLogin = async (req, res) => {
     return notFound(res, 'Customer')
   }
 
-  const passwdVerify = hash(password, customer.password)
+  const passwdVerify = await compare(password, customer.password)
   if (!passwdVerify) {
-    return notFound(res, 'Customer')
+    return res.status(401).json({
+      error: 'Wrong password'
+    })
   }
   updateLastLogin(customer.email)
   const token = jwt.sign({}, process.env.CUSTOMER_KEY, { subject: customer.id, expiresIn: '1d' })
