@@ -64,7 +64,6 @@ export const userLogin = async (req, res) => {
   }
 
   const passwdVerify = await compare(password, user.password)
-  console.log(passwdVerify)
   if (!passwdVerify) {
     return res.status(401).json({
       error: 'Wrong password'

@@ -19,8 +19,6 @@ export const updateLastLogin = async (email) => {
 export const createCustomer = async (req, res) => {
   const { name, email, password } = req.body
 
-  console.log(password)
-
   const customerExists = await Customer.findOne({ email })
 
   if (customerExists) {
