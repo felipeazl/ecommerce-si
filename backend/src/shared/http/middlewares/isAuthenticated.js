@@ -5,7 +5,6 @@ import { notAuthorized } from '../../errors'
 
 dotenv.config()
 
-
 export default function isAdminAuthenticated(req, res, _next,) {
   const authHeader = req.headers.authorization;
 

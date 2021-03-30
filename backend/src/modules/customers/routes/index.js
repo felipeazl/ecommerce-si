@@ -7,7 +7,6 @@ import {
 
 import { createCustomer, customerLogin }  from '../controllers/customer'
 
-
 const customersRoute = express.Router()
 
 customersRoute.post('/signup', celebrate({

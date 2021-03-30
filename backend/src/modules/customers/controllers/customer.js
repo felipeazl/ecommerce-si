@@ -76,6 +76,4 @@ export const customerLogin = async (req, res) => {
     lastLogin: customer.lastLogin,
     token
   })
-
-
 }
