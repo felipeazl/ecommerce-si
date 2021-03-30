@@ -1,6 +1,6 @@
 export const signUpPath = {
   post: {
-    tags: ['Login'],
+    tags: ['Customers Route'],
     summary: 'Endpoint to create a new user',
     requestBody: {
       content: {
@@ -27,10 +27,10 @@ export const signUpPath = {
       },
       401: {
         $ref: '#/components/unauthorized'
-      },    
+      },
       404: {
         $ref: '#/components/notFound'
-      },  
+      },
       500: {
         $ref: '#/components/serverError'
       }

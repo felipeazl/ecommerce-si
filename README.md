@@ -38,7 +38,7 @@
 ```
 MONGO_URL=mongodb://localhost/ecommercesi
 NODE_ENV="development"
-SECRET_KEY=""
+CUSTOMER_KEY=""
 ```
 
 - Run the server using the following command: `yarn dev`
@@ -53,6 +53,7 @@ SECRET_KEY=""
 MONGO_URL=mongodb://localhost/ecommercesi
 NODE_ENV="development"
 SECRET_KEY=""
+CUSTOMER_KEY=""
 ```
 
 - Visit `localhost:3000/api/check` to see the running api!

@@ -15,14 +15,14 @@ import loginAccountLimiter from '../controllers/rateLimit'
 
 const usersRoute = express.Router()
 
-usersRoute.post('/users/signup', celebrate({
+usersRoute.post('/signup', celebrate({
   [Segments.BODY]: {
     name: Joi.string().required(),
     email: Joi.string().email().required(),
     password: Joi.string().required(),
   }
 }), isAdminAuthenticated, createUser)
-usersRoute.post('/users/login', celebrate({
+usersRoute.post('/login', celebrate({
   [Segments.BODY]: {
     email: Joi.string().email().required(),
     password: Joi.string().required(),

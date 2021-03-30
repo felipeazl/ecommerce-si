@@ -1,4 +1,4 @@
-import { loginPath, signUpPath, toolsPath } from './paths'
+import { loginPath, signUpPath } from './paths'
 import { accountSchema, errorSchema, loginParamsSchema, signUpParamsSchema, tagsSchemas, toolSchema, toolsSchema, bearerSchema} from './schemas'
 import { badRequest, serverError, unauthorized, notFound, forbidden } from './components'
 
@@ -16,13 +16,12 @@ export default {
   contact: {
     name: 'Carlos Rodrigues',
     email: 'carls-f@live.com',
-    url: 'https://github.com/almakad/bossabox-challenger-vuttr-api'
   },
   servers: [{
     url: '/'
   }],
   tags: [{
-    name: 'Customers Login'
+    name: 'Customers Route'
   }
 ],
   paths: {
