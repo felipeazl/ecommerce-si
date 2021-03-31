@@ -49,7 +49,7 @@ export const createCustomer = async (req, res) => {
     }])
   }
   return res.status(400).json({
-      msg: '{name}(String), {email}(String), {notifications}(Boolean) and {password}(String) are required'
+      msg: `${name}(String), ${email}(String), ${notifications}(Boolean) and ${password}(String) are required`
     })
 }
 
