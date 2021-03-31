@@ -7,7 +7,7 @@ const authenticateUser = async () => {
       email: email,
       password: password
     }
-  const response = await fetch(url, {
+  await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -15,20 +15,22 @@ const authenticateUser = async () => {
     body: JSON.stringify(user),
     redirect: 'follow'
 
-  }).then(usuario => usuario.json()).then( async (response) => {
+  }).then(usuario => usuario.json()).then(async (response) => {
 
-    if (Object.keys(response)[0] === 'error') {
+    if (Object.keys(response)[0] !== 'id') {
       return document.getElementById('retorno').innerHTML = 'Wrong Password'
     }
     document.getElementById('retorno').innerHTML = 'Correct Password'
     let url_authenticated = 'http://localhost:3000/authenticated'
     
-    const auth = await fetch(url_authenticated, {
+    await fetch(url_authenticated, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         'authorization': `Bearer ${response.token}`
       },
-    }).then(resp => resp.json()).then(authResp => console.log(authResp))
+    }).then((value) => {
+      window.location.href = value.url
+    })
   })
 }

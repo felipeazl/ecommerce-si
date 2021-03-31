@@ -8,6 +8,7 @@ import setupSwagger from './shared/docs/config-swagger'
 import { errors } from 'celebrate'
 import bodyParser from 'body-parser'
 
+
 dotenv.config()
 
 const app = express()
@@ -21,7 +22,11 @@ mongoose.connection.on('error', err => {
   console.error(`%s ${err}`, chalk.red('x'))
 })
 
-app.use(cors())
+const corsOptions = {
+  origin: '*',
+}
+
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use(bodyParser.urlencoded())
 
