@@ -7,10 +7,12 @@ dotenv.config()
 export default function isCustomerAuthenticated(req, res, _next,) {
   const authHeader = req.headers.authorization;
 
+
   if (!authHeader) {
-    res.redirect('back')
+    return res.redirect('back')
   }
   const [, token] = authHeader.split(' ');
+
   try {
     const decodedToken = verify(token, process.env.CUSTOMER_KEY);
 
