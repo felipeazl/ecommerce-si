@@ -11,9 +11,7 @@ const router = express.Router()
 
 
 router.get('/authenticated', isCustomerAuthenticated, (req, res) => {
-  return res.json({
-    message: "User authenticated"
-  })
+  return res.redirect('http://google.com')
 })
 router.get('/', (req, res) => {
   return res.json({
