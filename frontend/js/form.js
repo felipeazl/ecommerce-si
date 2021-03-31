@@ -35,8 +35,8 @@ const authenticateUser = async () => {
       },
     }).then((value) => {
       window.location.href = value.url
-    })
-  })
+    }).catch(err => console.error(err))
+  }).catch(err => console.error(err))
 }
 
 const createUser = async () => {
