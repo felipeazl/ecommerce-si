@@ -24,6 +24,9 @@ const authenticateUser = async () => {
     document.getElementById('retorno').innerHTML = 'Correct Password'
     let url_authenticated = 'http://localhost:3000/authenticated'
 
+    myStorage = window.sessionStorage
+    myStorage.setItem('token', response.token);
+
     await fetch(url_authenticated, {
       method: 'GET',
       headers: {
@@ -62,5 +65,10 @@ const createUser = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data)
-  }).then(response => response.json()).then(res => console.log(res)).catch(err => console.error(err))
+  }).then(response => response.json())
+    .then((res) => {
+
+      console.log(res)
+    })
+    .catch(err => console.error(err))
 }
