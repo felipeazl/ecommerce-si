@@ -1,0 +1,20 @@
+header {
+    height: 120px;
+    padding: 0px;
+    background: #fff;
+    font-family: "Inter", sans-serif;
+    padding-bottom: 30px;
+}
+.logo {
+    padding: 5px 15px;
+    width: 6%;
+    float: left;
+}
+#menu {
+  width: 95%;
+  height: 100%;
+  border: black;
+  border-style: dashed;
+  margin: 0 auto;
+}
+
