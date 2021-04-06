@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acessar</title>
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="-1" />
-    <title>Cadastrar</title>
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/cadastrar-entrar.css">
@@ -26,11 +27,8 @@
 
             <div id="user">
                 <ul>
-                    <li id="menu-cadastro">
-                        <a>Cadastro</a>
-                    </li>
-                    <li id="menu-entrar">
-                        <a>Entrar</a>
+                    <li id="menu-cadastro-entrar">
+                        <a href="/frontend/cadastrar-entrar.html">Cadastrar | Entrar</a>
                     </li>
                 </ul>
             </div>
@@ -39,13 +37,13 @@
                 <div id="itens-menu">
                     <ul>
                         <li>
-                            <a>Home</a>
+                            <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a>Produtos</a>
+                            <a href="produtos.html">Produtos</a>
                         </li>
                         <li>
-                            <a>FAQ</a>
+                            <a href="contato.html">FAQ</a>
                         </li>
                     </ul>
                 </div>
@@ -78,9 +76,9 @@
 
         <div id="entrar">
             <div id="imagem-usuario">
-                <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/550731-de-icone-de-usuario-gr%C3%A1tis-vetor.jpg"
-                    alt="">
+                <img src="images/icone-usuario.jpg" alt="ícone do usuário">
             </div>
+
             <form action="/costumers/login" method="post">
                 <label for="email-entrar" class="labelEntrar">Email</label>
                 <input type="text" id="email-entrar" class="inputEntrar" required>
