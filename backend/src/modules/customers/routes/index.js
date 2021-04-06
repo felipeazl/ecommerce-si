@@ -6,6 +6,7 @@ import {
 } from 'celebrate'
 
 import { createCustomer, customerLogin }  from '../controllers/customer'
+import isCustomerAuthenticated from '../../../shared/http/middlewares/isCustomerAuthenticated'
 
 const customersRoute = express.Router()
 

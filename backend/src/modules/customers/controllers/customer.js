@@ -1,4 +1,4 @@
-import { hash } from 'bcryptjs'
+import { compare, hash } from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 
@@ -49,11 +49,12 @@ export const createCustomer = async (req, res) => {
     }])
   }
   return res.status(400).json({
-      msg: '{name}(String), {email}(String), {notifications}(Boolean) and {password}(String) are required'
+      msg: `${name}(String), ${email}(String), ${notifications}(Boolean) and ${password}(String) are required`
     })
 }
 
 export const customerLogin = async (req, res) => {
+
   const { email, password } = req.body
 
   const customer = await Customer.findOne({ email })
@@ -62,9 +63,11 @@ export const customerLogin = async (req, res) => {
     return notFound(res, 'Customer')
   }
 
-  const passwdVerify = hash(password, customer.password)
+  const passwdVerify = await compare(password, customer.password)
   if (!passwdVerify) {
-    return notFound(res, 'Customer')
+    return res.status(401).json({
+      error: 'Wrong password'
+    })
   }
   updateLastLogin(customer.email)
   const token = jwt.sign({}, process.env.CUSTOMER_KEY, { subject: customer.id, expiresIn: '1d' })

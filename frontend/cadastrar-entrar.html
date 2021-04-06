@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Acessar</title>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/cadastrar-entrar.css">
+    <script src="./js/form.js"></script>
 </head>
 
 <body>
@@ -62,22 +67,25 @@
                 <input type="password" id="senha-cadastrar" class="inputCadastrar" required>
                 <label for="confirm-cadastrar" class="labelCadastrar">Confirmar Senha</label>
                 <input type="password" id="confirm-cadastrar" class="inputCadastrar" required>
-                <input type="submit" value="CADASTRAR" id="botao-cadastrar">
+                <input type="button" value="CADASTRAR" id="botao-cadastrar" onclick="createUser()">
+                <p id="cadastro-report" style="text-align: center;"></p>
             </form>
         </div>
-        
+
         <div id="linha"></div>
 
         <div id="entrar">
             <div id="imagem-usuario">
                 <img src="images/icone-usuario.jpg" alt="ícone do usuário">
             </div>
+
             <form action="/costumers/login" method="post">
                 <label for="email-entrar" class="labelEntrar">Email</label>
                 <input type="text" id="email-entrar" class="inputEntrar" required>
                 <label for="senha-entrar" class="labelEntrar">Senha</label>
-                <input type="password" id="senha-entrar" class="inputEntrar" required>
-                <input type="submit" value="ENTRAR" id="botao-entrar">
+                <input type="password" id="senha-entrar" class="inputEntrar" required>,
+                <input type="button" value="ENTRAR" id="botao-entrar" onclick="authenticateUser()">
+                <p id="retorno" style="text-align: center;"></p>
             </form>
         </div>
     </div>

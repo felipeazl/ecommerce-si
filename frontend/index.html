@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,63 +8,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link href="styles/home.css" rel="stylesheet">
     <link href="styles/header.css" rel="stylesheet">
+    <link href="styles/menu.css" rel="stylesheet">
     <link href="styles/footer.css" rel="stylesheet">
     <link rel="icon" type="imagem/png" href="images/logo.png" />
+    <script src="js/script.js"></script>
     <title>Triple-F | O maior e-commerce de Sneakers do Brasil.</title>
+    <script src="js/script.js"></script>
 </head>
-<header>
-    <a>
-        <img class="logo" src="images/logo.png">
-    </a>
-    <nav id="menu">
-        <ul>
-            <li>
-                <a>Home</a>
-            </li>
-            <li>
-                <a>Produtos</a>
-            </li>
-            <li>
-                <a>FAQ</a>
-            </li>
-        </ul>
-    </nav>
-    <nav id="user">
-        <ul>
-            <li>
-                <a>Cadastro</a>
-            </li>
-            <li>
-                <a>Entrar</a>
-            </li>
-        </ul>
-    </nav>
-    <a>
-        <img class="carrinho" src="images/shopping.png">
-    </a>
-</header>
+
 <body>
-    <div>
-        <img class="img1" src="images/banner1.png">
-        <p class="imgtxt" >Bem-vindos ao maior e-commerce de sneakers do Brasil</p>
-    </div>
-    <div>
-        <a>
-            <img class="img2" src="images/banner2.jpeg">
-            <p class="imgtxt2">IR PARA A LOJA</p>
-        </a>
-    </div>
-    <footer>
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a>Sobre</a>
-                </li>
-                <li>
-                    <a>FAQ</a>
-                </li>
-            </ul>
+    <div id="container">
+        <header>
+        <nav id="menu">
+            <div id="logo">
+                <a>
+                    <img class="logo" src="images/logo.png">
+                </a>
+            </div>
+
+            <div id="user">
+                <ul>
+                    <li id="menu-cadastro">
+                        <a href="cadastrar-entrar.html">Cadastro</a>
+                    </li>
+                    <li id="menu-entrar">
+                        <a>Entrar</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="navegacao">
+                <div id="itens-menu">
+                    <ul>
+                        <li>
+                            <a>Home</a>
+                        </li>
+                        <li>
+                            <a>Produtos</a>
+                        </li>
+                        <li>
+                            <a>FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="carrinho">
+                    <a>
+                        <img id="img-carrinho" src="images/shopping.png">
+                    </a>
+                </div>
+            </div>
         </nav>
-    </footer>
+    </header>
+        <div class="image-center">
+            <img id="center-image" src="images/banner1.png">
+            <p class="imgtxt">Bem-vindos ao maior e-commerce de sneakers do Brasil</p>
+        </div>
+        <div class="image-center">
+            <img id="center-image" src="images/banner2.jpeg">
+            <p class="imgtxt2">Bem-vindos ao maior e-commerce de sneakers do Brasil</p>
+        </div>
+
+        <footer>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a>Sobre</a>
+                    </li>
+                    <li>
+                        <a>FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
 </body>
+
 </html>
