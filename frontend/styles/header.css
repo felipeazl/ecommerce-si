@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
 header {
     height: 100px;
     margin: 0;
@@ -22,7 +27,7 @@ header {
     float: left;
 }
 #user {
-    margin-top: -10px;
+    margin-top: 0px;
     background: white;
     width: 100%;
     height: 20px;
@@ -82,7 +87,7 @@ header {
 #img-carrinho {
     padding-top: 10px;
     width: 25px;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-right: 30%;
     float: right;
 }
