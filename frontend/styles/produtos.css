@@ -1,9 +1,8 @@
 #menu-lateral {
     width: 20%;
-    height: 70vh;
+    height: 40vh;
     float: left;
     position: fixed;
-    background: gray;
 }
 #filtragem {
     width: 100%;
