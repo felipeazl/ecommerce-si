@@ -9,66 +9,79 @@
     <link href="styles/home.css" rel="stylesheet">
     <link href="styles/header.css" rel="stylesheet">
     <link href="styles/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="styles/carousel.css" rel="stylesheet">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <link rel="icon" type="imagem/png" href="images/logo.png" />
     <title>Triple-F | O maior e-commerce de Sneakers do Brasil.</title>
 </head>
-    <header>
-        <nav id="menu">
-            <div id="logo">
-                <a href="/frontend/index.html">
-                    <img class="logo" src="images/logo.png">
+<header id="myHead">
+    <nav id="menu">
+        <div id="logo">
+            <a href="/frontend/index.html">
+                <img class="logo" src="images/logo.png">
+            </a>
+        </div>
+
+        <div id="user">
+        </div>
+
+        <div id="navegacao">
+            <div id="itens-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="produtos.html">Produtos</a>
+                    </li>
+                    <li>
+                        <a href="contato.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="carrinho">
+                <a>
+                    <img id="img-carrinho" src="images/shopping.png">
                 </a>
             </div>
+        </div>
+    </nav>
+</header>
 
-            <div id="user">
-            </div>
-
-            <div id="navegacao">
-                <div id="itens-menu">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="produtos.html">Produtos</a>
-                        </li>
-                        <li>
-                            <a href="contato.html">FAQ</a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="carrinho">
-                    <a>
-                        <img id="img-carrinho" src="images/shopping.png">
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <div class="image-center">
-        <img id="center-image" src="images/banner1.png">
-        <p class="imgtxt">Bem-vindos ao maior e-commerce de sneakers do Brasil</p>
+<div class="image-center">
+    <img id="center-image" src="images/banner1.png">
+    <p class="imgtxt">Bem-vindos ao maior e-commerce de sneakers do Brasil</p>
+</div>
+<div>
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
     </div>
-    <div class="image-center">
-        <img id="center-image" src="images/banner2.jpeg">
-        <p class="imgtxt2">Bem-vindos ao maior e-commerce de sneakers do Brasil</p>
-    </div>
+</div>
+</br>
+<div class="image-center">
+    <img id="center-image" src="images/banner2.jpeg">
+    <p class="imgtxt2">Bem-vindos ao maior e-commerce de sneakers do Brasil</p>
+</div>
 
-    <footer>
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a>Sobre</a>
-                </li>
-                <li>
-                    <a>FAQ</a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
+<footer>
+    <nav id="nav">
+        <ul>
+            <li>
+                <a>Sobre</a>
+            </li>
+            <li>
+                <a>FAQ</a>
+            </li>
+        </ul>
+    </nav>
+</footer>
 
-    <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>

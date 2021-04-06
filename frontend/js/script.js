@@ -1,6 +1,6 @@
 let formUser = document.getElementById('user')
   
-formUser.innerHTML = "<ul>  <li id='menu-cadastro-entrar'> <a href='/frontend/cadastrar-entrar.html'>Cadastrar | Entrar</a> </li></ul>"
+formUser.innerHTML = "<ul> <li id='menu-cadastro-entrar'> <a href='/frontend/cadastrar-entrar.html'>Cadastrar | Entrar</a> </li></ul>"
 
 const authenticated = async () => {
   

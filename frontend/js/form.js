@@ -21,7 +21,6 @@ const authenticateUser = async () => {
     if (Object.keys(response)[0] !== 'id') {
       return document.getElementById('retorno').innerHTML = 'Wrong Password'
     }
-    document.getElementById('retorno').innerHTML = 'Correct Password'
     let url_authenticated = 'http://localhost:3000/authenticated'
 
     myStorage = window.sessionStorage
@@ -75,7 +74,6 @@ const createUser = async () => {
       myStorage.setItem('id', res[0].id);
       myStorage.setItem('token', res[0].token);
 
-      const token = window.sessionStorage.getItem('token')
       let url_authenticated = 'http://localhost:3000/authenticated'
       await fetch(url_authenticated, {
         method: 'GET',
