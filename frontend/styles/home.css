@@ -1,0 +1,53 @@
+body {
+  font-family: 'Inter', sans-serif;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+    width: 100%;
+    height: auto;
+}
+
+.image-center {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 1%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#center-image {
+  width: 100%;
+  height: auto;
+}
+.img1 {
+    width: 1600px;
+    height: 900px;
+    margin-top: 20px;
+}
+.imgtxt {
+    position: absolute;
+    font-size: 32px;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+}
+
+/* .img2 {
+    width: 1600px;
+    height: 900px;
+    margin-top: 80px;
+    margin-left: 143px;
+} */
+.imgtxt2 {
+		position: absolute;
+    font-size: 30px;
+		padding-left: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+}
