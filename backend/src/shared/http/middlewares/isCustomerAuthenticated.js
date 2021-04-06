@@ -22,7 +22,6 @@ export default function isCustomerAuthenticated(req, res, _next,) {
     };
     return _next();
   } catch (error) {
-    console.log('erro')
     return notAuthorized(res, 'Product')
   }
 }

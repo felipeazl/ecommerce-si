@@ -24,7 +24,6 @@ const authenticateUser = async () => {
     document.getElementById('retorno').innerHTML = 'Correct Password'
     let url_authenticated = 'http://localhost:3000/authenticated'
 
-    console.log(response)
     myStorage = window.sessionStorage
     myStorage.setItem('name', response.name);
     myStorage.setItem('id', response.id);
@@ -37,6 +36,7 @@ const authenticateUser = async () => {
         'authorization': `Bearer ${response.token}`
       },
     }).then((value) => {
+      console.log(value)
       window.location.href = value.url
     }).catch(err => console.error(err))
   }).catch(err => console.error(err))
@@ -63,15 +63,30 @@ const createUser = async () => {
   }
 
   await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data)
-  }).then(response => response.json())
-    .then((res) => {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    }).then(response => response.json())
+    .then( async (res) => {
+      myStorage = window.sessionStorage
+      myStorage.setItem('name', res[0].name);
+      myStorage.setItem('id', res[0].id);
+      myStorage.setItem('token', res[0].token);
 
-      console.log(res)
+      const token = window.sessionStorage.getItem('token')
+      let url_authenticated = 'http://localhost:3000/authenticated'
+      await fetch(url_authenticated, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'authorization': `Bearer ${res[0].token}`
+        },
+      }).then((value) => {
+        console.log(value)
+        window.location.href = value.url
+      }).catch(err => console.error(err))
     })
     .catch(err => console.error(err))
 }
