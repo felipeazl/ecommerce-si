@@ -8,7 +8,7 @@
 
 .gallery-cell {
   width: 28%;
-  height: 200px;
+  height: 250px;
   margin-right: 10px;
   background: #8C8;
   counter-increment: gallery-cell;
