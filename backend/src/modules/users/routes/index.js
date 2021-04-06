@@ -10,7 +10,7 @@ import {
   userLogin
 } from '../controllers/user'
 import isAdminAuthenticated from '../../../shared/http/middlewares/isAuthenticated'
-import loginAccountLimiter from '../controllers/rateLimit'
+import loginAccountLimiter from '../../../shared/http/middlewares/rateLimit'
 
 
 const usersRoute = express.Router()

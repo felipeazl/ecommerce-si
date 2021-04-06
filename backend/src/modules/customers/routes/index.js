@@ -5,8 +5,8 @@ import {
   Segments
 } from 'celebrate'
 
-import { createCustomer, customerLogin }  from '../controllers/customer'
-import isCustomerAuthenticated from '../../../shared/http/middlewares/isCustomerAuthenticated'
+import { createCustomer, customerLogin } from '../controllers/customer'
+import loginAccountLimiter from '../../../shared/http/middlewares/rateLimit'
 
 const customersRoute = express.Router()
 
@@ -22,6 +22,6 @@ customersRoute.post('/login', celebrate({
     email: Joi.string().email().required(),
     password: Joi.string().required(),
   }
-}), customerLogin)
+}), loginAccountLimiter, customerLogin)
 
 export default customersRoute;

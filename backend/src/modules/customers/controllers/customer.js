@@ -22,7 +22,6 @@ export const createCustomer = async (req, res) => {
   const customerExists = await Customer.findOne({ email })
 
   if (customerExists) {
-    // await saveRequest(req)
     return res.status(400).json({
       msg: 'Usuário já cadastrado'
     })
@@ -42,10 +41,13 @@ export const createCustomer = async (req, res) => {
       _id: customer._id
     }
 
+    const token = jwt.sign({}, process.env.CUSTOMER_KEY, { subject: customer.id, expiresIn: '1d' })
+
     return res.json([{
       id: customer._id,
       name: customer.name,
       email: customer.email,
+      token
     }])
   }
   return res.status(400).json({

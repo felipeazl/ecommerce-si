@@ -4,7 +4,6 @@ import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
 import router from './shared/http/routes'
-import setupSwagger from './shared/docs/config-swagger'
 import { errors } from 'celebrate'
 import bodyParser from 'body-parser'
 
@@ -30,7 +29,6 @@ app.use(cors(corsOptions))
 app.use(express.json())
 app.use(bodyParser.urlencoded())
 
-setupSwagger(app)
 app.use(router)
 app.use(errors())
 

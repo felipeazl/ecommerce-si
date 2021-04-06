@@ -8,60 +8,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link href="styles/home.css" rel="stylesheet">
     <link href="styles/header.css" rel="stylesheet">
-    <link href="styles/menu.css" rel="stylesheet">
     <link href="styles/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="styles/carousel.css" rel="stylesheet">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <link rel="icon" type="imagem/png" href="images/logo.png" />
-    <script src="js/script.js"></script>
     <title>Triple-F | O maior e-commerce de Sneakers do Brasil.</title>
-    <script src="js/script.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <nav id="menu">
-            <div id="logo">
-                <a href="/frontend/index.html">
-                    <img class="logo" src="images/logo.png">
-                </a>
-            </div>
+<header id="myHead">
+    <nav id="menu">
+        <div id="logo">
+            <a href="/frontend/index.html">
+                <img class="logo" src="images/logo.png">
+            </a>
+        </div>
 
-            <div id="user">
+        <div id="user">
+        </div>
+
+        <div id="navegacao">
+            <div id="itens-menu">
                 <ul>
-                    <li id="menu-cadastro-entrar">
-                        <a href="/frontend/cadastrar-entrar.html">Cadastrar | Entrar</a>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="produtos.html">Produtos</a>
+                    </li>
+                    <li>
+                        <a href="contato.html">FAQ</a>
                     </li>
                 </ul>
             </div>
-
-            <div id="navegacao">
-                <div id="itens-menu">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="produtos.html">Produtos</a>
-                        </li>
-                        <li>
-                            <a href="contato.html">FAQ</a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="carrinho">
-                    <a>
-                        <img id="img-carrinho" src="images/shopping.png">
-                    </a>
-                </div>
+            <div id="carrinho">
+                <a>
+                    <img id="img-carrinho" src="images/shopping.png">
+                </a>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
- 
     <div class="image-center">
         <img id="center-image" src="images/banner1.png">
         <p class="imgtxt">Bem-vindos ao maior e-commerce de sneakers do Brasil</p>
     </div>
+<div>
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+    </div>
+</div>
+</br>
    
     <a>
         <div class="image-center">
@@ -70,7 +74,7 @@
         </div>
     </a>
 
-    <footer>
+<footer>
         <div id="f-menu">
             <ul>
                 <li>
@@ -82,11 +86,10 @@
         <div id="pagamento">
             <img src="images/pagamentos.png">
         </div> 
+    </nav>
+</footer>
 
-        <div id="copyright">
-            <p id="copyright-text">Developed and Designed by TF&C ©</p>
-        </div>
-        
-    </footer>
+<script src="js/script.js"></script>
+</body>
 </body>
 </html>

@@ -19,11 +19,6 @@
             </div>
     
             <div id="user">
-                <ul>
-                    <li id="menu-cadastro-entrar">
-                        <a href="/frontend/cadastrar-entrar.html">Cadastrar | Entrar</a>
-                    </li>
-                </ul>
             </div>
     
             <div id="navegacao">
@@ -52,7 +47,7 @@
     <div class="container">
         <div id="menu-lateral">
             <div id="filtragem">
-                <button class="filtro">teste</button>
+                <input id="pesquisar-nome" class="filtro" onkeyup="pesquisar(this)">
                 <button class="filtro">teste</button>
                 <button class="filtro">teste</button>
                 <button class="filtro">teste</button>
@@ -62,8 +57,28 @@
         <div class="conteudo">
             <div class="lista-produto">
                 <div class="produto">
+                    <img class="produto-image"src="images/produtos/Air Max 97.png" alt="">
+                    <small class="produto-nome">Air Max 98</small>
+                </div>
+
+                <div class="produto">
                     <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
-                    <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-nome">Air Max 96</small>
+                </div>
+
+                <div class="produto">
+                    <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
+                    <small class="produto-nome">Air Max 95</small>
+                </div>
+
+                <div class="produto">
+                    <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
+                    <small class="produto-nome">Air Max 94</small>
+                </div>
+
+                <div class="produto">
+                    <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
+                    <small class="produto-nome">Air Max 96</small>
                 </div>
 
                 <div class="produto">
@@ -88,32 +103,12 @@
 
                 <div class="produto">
                     <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
-                    <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-nome">Jordan 96</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
-                    <small class="produto-nome">Air Max 97</small>
-                </div>
-
-                <div class="produto">
-                    <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
-                    <small class="produto-nome">Air Max 97</small>
-                </div>
-
-                <div class="produto">
-                    <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
-                    <small class="produto-nome">Air Max 97</small>
-                </div>
-
-                <div class="produto">
-                    <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
-                    <small class="produto-nome">Air Max 97</small>
-                </div>
-
-                <div class="produto">
-                    <img class="produto-image" src="images/produtos/Air Max 97.png" alt="">
-                    <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-nome">Jordan 2000</small>
                 </div>
 
                 <div class="produto">
@@ -181,5 +176,7 @@
         </div>
         
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/pesquisa.js"></script>
 </body>
 </html>
