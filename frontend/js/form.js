@@ -51,6 +51,12 @@ const createUser = async () => {
   let password = document.getElementById('senha-cadastrar').value
   let passwordConfirmation = document.getElementById('confirm-cadastrar').value
 
+  let validEmail = new RegExp('\S+@\S+\.\S+')
+
+  if (!validEmail.test(email)) {
+    return document.getElementById('cadastro-report').innerHTML = 'Email inválido'
+  }
+
   if (password !== passwordConfirmation) {
     return document.getElementById('cadastro-report').innerHTML = 'As senhas são diferentes'
   }
