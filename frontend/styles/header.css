@@ -40,9 +40,6 @@ header {
 #user ul li a:hover {
     border-bottom:1px solid black;
 }
-#menu-entrar::before{
-    content: " | ";
-}
 #navegacao {
     width: 75%;
     height: 40px;
