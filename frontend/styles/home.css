@@ -19,6 +19,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  margin-top: 5%;
 }
 
 #center-image {
@@ -51,4 +52,33 @@ body {
     font-family: sans-serif;
     text-align: center;
     color: white;
+}
+
+#items-wrapper {
+  margin-top: 10%;
+  width: 99vw;
+}
+.sneaker {
+  width: 40%;
+}
+
+#items {
+  display: flex;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.item {
+  text-align: center;
+  flex: none;
+
+  scroll-snap-align: start;
+
+  pointer-events: none;
+}
+.description{
+  text-aling: center;
+  font-size: 20px;
 }
