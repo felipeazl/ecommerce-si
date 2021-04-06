@@ -56,6 +56,7 @@ export const createCustomer = async (req, res) => {
 export const customerLogin = async (req, res) => {
 
   const { email, password } = req.body
+  console.log(email, password)
 
   const customer = await Customer.findOne({ email })
 

@@ -17,12 +17,12 @@ export default function isCustomerAuthenticated(req, res, _next,) {
     const decodedToken = verify(token, process.env.CUSTOMER_KEY);
 
     const { sub } = decodedToken
-
     req.user = {
       id: sub,
     };
     return _next();
   } catch (error) {
+    console.log('erro')
     return notAuthorized(res, 'Product')
   }
 }

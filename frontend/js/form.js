@@ -24,7 +24,10 @@ const authenticateUser = async () => {
     document.getElementById('retorno').innerHTML = 'Correct Password'
     let url_authenticated = 'http://localhost:3000/authenticated'
 
+    console.log(response)
     myStorage = window.sessionStorage
+    myStorage.setItem('name', response.name);
+    myStorage.setItem('id', response.id);
     myStorage.setItem('token', response.token);
 
     await fetch(url_authenticated, {

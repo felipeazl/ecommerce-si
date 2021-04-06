@@ -11,7 +11,7 @@ const router = express.Router()
 
 
 router.get('/authenticated', isCustomerAuthenticated, (req, res) => {
-  return res.redirect('http://127.0.0.1:5500/frontend/sobre.html')
+  return res.redirect('http://127.0.0.1:5500/frontend/')
 })
 router.get('/', (req, res) => {
   return res.json({
