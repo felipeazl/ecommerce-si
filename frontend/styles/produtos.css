@@ -80,4 +80,10 @@
 }
 .produto-nome {
     width: 100%;
+    float: left;
+}
+.produto-preco {
+    width: 100%;
+    padding-top: 5px;
+    float: left;
 }
