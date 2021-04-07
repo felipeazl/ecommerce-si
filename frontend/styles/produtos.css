@@ -59,6 +59,7 @@
 }
 .conteudo {
     width: 70%;
+    min-height: 45vh;
     margin-left: 25%;
     margin-top: 2.5%;
     margin-bottom: 25px;

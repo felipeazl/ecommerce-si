@@ -2,7 +2,6 @@ import express from 'express'
 
 import usersRoute from '../../../modules/users/routes'
 import customersRoute from '../../../modules/customers/routes'
-import productsRoute from '../../../modules/products/routes'
 
 import isCustomerAuthenticated from '../middlewares/isCustomerAuthenticated'
 
@@ -19,8 +18,6 @@ router.get('/', (req, res) => {
   })
 })
 
-router.use('/users', usersRoute)
 router.use('/customers', customersRoute)
-router.use('/products', productsRoute)
 
 export default router;
