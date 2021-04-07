@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/produtos.css">
 </head>
+
 <body>
     <header>
         <nav id="menu">
@@ -17,10 +19,10 @@
                     <img class="logo" src="images/logo.png">
                 </a>
             </div>
-    
+
             <div id="user">
             </div>
-    
+
             <div id="navegacao">
                 <div id="itens-menu">
                     <ul>
@@ -47,92 +49,140 @@
     <div class="container">
         <div id="menu-lateral">
             <div id="filtragem">
+                <label for="pesquisar-nome" class="labelFiltro">Pesquisar Produto</label>
                 <input id="pesquisar-nome" class="filtro" onkeyup="pesquisar(this)">
-                <button class="filtro">teste</button>
-                <button class="filtro">teste</button>
-                <button class="filtro">teste</button>
+
+                <!--
+                    <label for="pesquisar-nome" class="labelFiltro">Filtrar por Cor</label>
+                <select name="" id="filtro-cor" class="filtro-select">
+                    <option value="" class="filtro-opt">Todas</option>
+                    <option value="" class="filtro-opt">Vermelho</option>
+                    <option value="" class="filtro-opt">Azul</option>
+                </select>
+                -->
+                <label for="" id="filtrar-cor">Filtrar por Cor</label>
+                <div class="filtro-cor">
+                    <input type="checkbox" id="cor-todas" class="filtro-checkbox">
+                    <label for="cor-todas" class="cor-nome"> Todas</label>
+                </div>
+
+                <div class="filtro-cor">
+                    <input type="checkbox" id="cor-preto" class="filtro-checkbox">
+                    <label for="cor-preto" class="cor-nome"> Preto</label>
+                </div>
+
+                <div class="filtro-cor">
+                    <input type="checkbox" id="cor-vermelho" class="filtro-checkbox">
+                    <label for="cor-vermelho" class="cor-nome">Vermelho</label>
+                </div>
+                
+                <div class="filtro-cor">
+                    <input type="checkbox" id="cor-azul" class="filtro-checkbox">
+                    <label for="cor-azul" class="cor-nome">Azul</label>
+                </div>
+
+                <div class="filtro-cor">
+                    <input type="checkbox" id="cor-rosa" class="filtro-checkbox">
+                    <label for="cor-rosa" class="cor-nome">Rosa</label>
+                </div>
             </div>
         </div>
-        
+
         <div class="conteudo">
             <div class="lista-produto">
                 <div class="produto">
-                    <img class="produto-image alt="">
+                    <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 98</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 96</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 95</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 94</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 96</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Jordan 96</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Jordan 2000</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 97</small>
-                </div>
-                
-                <div class="produto">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
 
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
-                
+
                 <div class="produto">
                     <img class="produto-image" alt="">
                     <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-preco">R$ 50,00</small>
+                </div>
+
+                <div class="produto">
+                    <img class="produto-image" alt="">
+                    <small class="produto-nome">Air Max 97</small>
+                    <small class="produto-preco">R$ 50,00</small>
                 </div>
             </div>
 
@@ -164,19 +214,20 @@
                 <li>
                     <a href="contato.html">FAQ</a>
                 </li>
-            </ul> 
+            </ul>
         </div>
 
         <div id="pagamento">
             <img src="images/pagamentos.png">
-        </div> 
+        </div>
 
         <div id="copyright">
             <p id="copyright-text">Developed and Designed by TF&C ©</p>
         </div>
-        
+
     </footer>
     <script src="js/script.js"></script>
     <script src="js/pesquisa.js"></script>
 </body>
+
 </html>
