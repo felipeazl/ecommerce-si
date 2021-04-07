@@ -4,6 +4,12 @@ const authenticateUser = async () => {
   let email = document.getElementById('email-entrar').value
   let password = document.getElementById('senha-entrar').value
 
+  let validEmail = new RegExp('\S+@\S+\.\S+')
+
+  if (!validEmail.test(email)) {
+    return document.getElementById('retorno').innerHTML = 'Email inválido'
+  }
+
   let user = {
     email: email,
     password: password
@@ -50,6 +56,12 @@ const createUser = async () => {
   let email = document.getElementById('email-cadastrar').value
   let password = document.getElementById('senha-cadastrar').value
   let passwordConfirmation = document.getElementById('confirm-cadastrar').value
+
+  let validEmail = new RegExp('\S+@\S+\.\S+')
+
+  if (!validEmail.test(email)) {
+    return document.getElementById('cadastro-report').innerHTML = 'Email inválido'
+  }
 
   if (password !== passwordConfirmation) {
     return document.getElementById('cadastro-report').innerHTML = 'As senhas são diferentes'
