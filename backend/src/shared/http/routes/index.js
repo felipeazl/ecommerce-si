@@ -1,10 +1,8 @@
 import express from 'express'
 
-import usersRoute from '../../../modules/users/routes'
 import customersRoute from '../../../modules/customers/routes'
 
 import isCustomerAuthenticated from '../middlewares/isCustomerAuthenticated'
-
 
 const router = express.Router()
 

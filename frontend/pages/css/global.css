@@ -1,0 +1,19 @@
+.container {
+	display: grid;
+	grid-gap: 10px;
+	font-family: "Inter", sans-serif;
+	/* max-width: 1300px; */
+	min-width: 350px;
+}
+.container > * {
+	padding: 0.5em;
+	border-radius: 1em;
+}
+header {
+	grid-area: header;
+	z-index: 1;
+	margin: 0;
+	padding: 0px;
+	background: #fff;
+	font-family: "Inter", sans-serif;
+}

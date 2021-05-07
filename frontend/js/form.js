@@ -4,9 +4,12 @@ const authenticateUser = async () => {
   let email = document.getElementById('email-entrar').value
   let password = document.getElementById('senha-entrar').value
 
-  let validEmail = new RegExp('\S+@\S+\.\S+')
+  let validEmail = new RegExp('\\S+@\\S+\\.\\S+')
+
+  console.log(!validEmail.test(email))
 
   if (!validEmail.test(email)) {
+
     return document.getElementById('retorno').innerHTML = 'Email inválido'
   }
 
