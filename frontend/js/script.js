@@ -1,9 +1,9 @@
 let formUser = document.getElementById('user')
-  
+
 formUser.innerHTML = "<ul> <li id='menu-cadastro-entrar'> <a href='/frontend/cadastrar-entrar.html'>Cadastrar | Entrar</a> </li></ul>"
 
 const authenticated = async () => {
-  
+
   let url_authenticated = 'http://localhost:3000/authenticated'
 
   const token = window.sessionStorage.getItem('token');
@@ -25,7 +25,7 @@ const authenticated = async () => {
   }
   formUser.innerHTML = `<ul>  <li id='menu-cadastro-entrar'> Bem-vindo, ${name.split(' ')[0]}! <a href="#" onclick="window.sessionStorage.clear() 
     window.location.reload()"> Sair </a> </li></ul>`
-  
+
 }
 
 document.addEventListener('DOMContentLoaded', authenticated)

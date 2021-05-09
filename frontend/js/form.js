@@ -6,8 +6,6 @@ const authenticateUser = async () => {
 
   let validEmail = new RegExp('\\S+@\\S+\\.\\S+')
 
-  console.log(!validEmail.test(email))
-
   if (!validEmail.test(email)) {
 
     return document.getElementById('retorno').innerHTML = 'Email inválido'
@@ -34,7 +32,7 @@ const authenticateUser = async () => {
 
     myStorage = window.sessionStorage
     myStorage.setItem('name', response.name);
-    myStorage.setItem('id', response.id);
+    myStorage.setItem('client_id', response.id);
     myStorage.setItem('token', response.token);
 
     await fetch(url_authenticated, {
@@ -44,7 +42,6 @@ const authenticateUser = async () => {
         'authorization': `Bearer ${response.token}`
       },
     }).then((value) => {
-      console.log(value)
       window.location.href = value.url
     }).catch(err => console.error(err))
   }).catch(err => console.error(err))
@@ -86,7 +83,7 @@ const createUser = async () => {
     .then( async (res) => {
       myStorage = window.sessionStorage
       myStorage.setItem('name', res[0].name);
-      myStorage.setItem('id', res[0].id);
+      myStorage.setItem('client_id', res[0].id);
       myStorage.setItem('token', res[0].token);
 
       let url_authenticated = 'http://localhost:3000/authenticated'
@@ -97,7 +94,6 @@ const createUser = async () => {
           'authorization': `Bearer ${res[0].token}`
         },
       }).then((value) => {
-        console.log(value)
         window.location.href = value.url
       }).catch(err => console.error(err))
     })

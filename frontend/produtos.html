@@ -1,200 +1,97 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/produtos.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/menu-header.css">
+  <link rel="stylesheet" href="./css/grid.css">
+  <link rel="stylesheet" href="./css/produtos.css">
+  <link rel="stylesheet" href="./css/menu-lateral.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/4d7495ab7e.js" crossorigin="anonymous"></script>
+  <title>Produtos</title>
 </head>
 
 <body>
-    <header>
-        <nav id="menu">
-            <div id="logo">
-                <a href="/frontend/index.html">
-                    <img class="logo" src="images/logo.png">
-                </a>
-            </div>
 
+  <div class="container">
+    <header>
+      <div id="wrapper-menu">
+        <!-- menu mobile -->
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div id="logo">
+          <a href="/frontend/index.html">
+            <img class="logo" src="./images/logo.png">
+          </a>
+        </div>
+        <div id="top-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="produtos.html">Produtos</a>
+            </li>
+            <li>
+              <a href="contato.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div id="carrinho">
+          <div id="user-form">
             <div id="user">
             </div>
-
-            <div id="navegacao">
-                <div id="itens-menu">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="produtos.html">Produtos</a>
-                        </li>
-                        <li>
-                            <a href="contato.html">FAQ</a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="carrinho">
-                    <a>
-                        <img id="img-carrinho" src="images/shopping.png">
-                    </a>
-                </div>
-            </div>
-        </nav>
+          </div>
+          <!-- <img src="./images/shopping.png"> -->
+          
+          <div id="cart" class="cart" data-totalitems="0">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <div class="container">
-        <div id="menu-lateral">
-            <div id="filtragem">
-                <label for="pesquisar-nome" class="labelFiltro">Pesquisar Produto</label>
-                <input id="pesquisar-nome" class="filtro" onkeyup="pesquisar(this)">
-
-                
-                <label for="" id="filtrar-cor">Filtrar por Cor</label>
-                <div class="filtro-cor">
-                    <input type="checkbox" id="cor-preto" class="filtro-checkbox">
-                    <label for="cor-preto" class="cor-nome"> Preto</label>
-                </div>
-
-                <div class="filtro-cor">
-                    <input type="checkbox" id="cor-vermelho" class="filtro-checkbox">
-                    <label for="cor-vermelho" class="cor-nome">Vermelho</label>
-                </div>
-                
-                <div class="filtro-cor">
-                    <input type="checkbox" id="cor-azul" class="filtro-checkbox">
-                    <label for="cor-azul" class="cor-nome">Azul</label>
-                </div>
-
-                <div class="filtro-cor">
-                    <input type="checkbox" id="cor-rosa" class="filtro-checkbox">
-                    <label for="cor-rosa" class="cor-nome">Rosa</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="conteudo">
-            <div class="lista-produto">
-                <div class="produto vermelho">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Jordan 1 Chicago</small>
-                    <small class="produto-preco">R$ 899,00</small>
-                </div>
-
-                <div class="produto vermelho">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Air Max 97 GR</small>
-                    <small class="produto-preco">R$ 799,00</small>
-                </div>
-
-                <div class="produto vermelho">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Air Force 1 OFF-WHITE</small>
-                    <small class="produto-preco">R$ 12999,00</small>
-                </div>
-
-                <div class="produto azul">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Nike React Element</small>
-                    <small class="produto-preco">R$ 599,00</small>
-                </div>
-
-                <div class="produto azul">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Air Force 1 React</small>
-                    <small class="produto-preco">R$ 499,00</small>
-                </div>
-
-                <div class="produto rosa">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Nike Dunk High</small>
-                    <small class="produto-preco">R$ 999,00</small>
-                </div>
-
-                <div class="produto azul">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Jordan 34</small>
-                    <small class="produto-preco">R$ 899,00</small>
-                </div>
-
-                <div class="produto preto rosa">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Jordan Air Zoom</small>
-                    <small class="produto-preco">R$ 599,00</small>
-                </div>
-
-                <div class="produto preto">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Air Max 97 Black</small>
-                    <small class="produto-preco">R$ 799,00</small>
-                </div>
-
-                <div class="produto preto">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Air Max 720 OB</small>
-                    <small class="produto-preco">R$ 599,00</small>
-                </div>
-
-                <div class="produto preto">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Air Max 270</small>
-                    <small class="produto-preco">R$ 449,00</small>
-                </div>
-
-                <div class="produto preto">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Nike Shox</small>
-                    <small class="produto-preco">R$ 999,99</small>
-                </div>
-                <div class="produto preto">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">VaporMax FlyKnit</small>
-                    <small class="produto-preco">R$ 999,00</small>
-                </div>
-
-                <div class="produto preto rosa">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">AlphaFly</small>
-                    <small class="produto-preco">R$ 1800,00</small>
-                </div>
-
-                <div class="produto rosa">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">Nike Kyrie 5 SpongeBob</small>
-                    <small class="produto-preco">R$ 499,00</small>
-                </div>
-
-                <div class="produto azul">
-                    <img class="produto-image" alt="">
-                    <small class="produto-nome">OFF-WHITE Waffle Racer</small>
-                    <small class="produto-preco">R$ 3600,00</small>
-                </div>
-            </div>
-        </div>
+    <div id="container-produtos">
     </div>
-    <footer>
-        <div id="f-menu">
-            <ul>
-                <li>
-                    <a href="contato.html">FAQ</a>
-                </li>
-            </ul>
+
+    <div id="menu-lateral">
+      <div id="filtragem">
+        <label for="pesquisar-nome" class="labelFiltro">Pesquisar Produto</label>
+        <input id="pesquisar-nome" placeholder="Pesquisar" class="filtro" onkeyup="pesquisar(this)">
+
+
+        <div class="filtro-cor">
+          <label for="" id="filtrar-cor">Filtrar por Cor</label> </br>
+          <input type="checkbox" id="cor-preto" class="filtro-checkbox">
+          <label for="cor-preto" class="cor-nome"> Preto</label>
         </div>
 
-        <div id="pagamento">
-            <img src="images/pagamentos.png">
+        <div class="filtro-cor">
+          <input type="checkbox" id="cor-vermelho" class="filtro-checkbox">
+          <label for="cor-vermelho" class="cor-nome">Vermelho</label>
         </div>
 
-        <div id="copyright">
-            <p id="copyright-text">Developed and Designed by TF&C ©</p>
+        <div class="filtro-cor">
+          <input type="checkbox" id="cor-azul" class="filtro-checkbox">
+          <label for="cor-azul" class="cor-nome">Azul</label>
         </div>
 
-    </footer>
-    <script src="js/script.js"></script>
-    <script src="js/pesquisa.js"></script>
+        <div class="filtro-cor">
+          <input type="checkbox" id="cor-rosa" class="filtro-checkbox">
+          <label for="cor-rosa" class="cor-nome">Rosa</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/pesquisa.js"></script>
+  <script src="./js/shopping.js"></script>
 </body>
 
 </html>

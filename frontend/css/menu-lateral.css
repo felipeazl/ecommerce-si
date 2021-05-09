@@ -1,0 +1,21 @@
+#menu-lateral {
+  display: grid;
+  grid-area: sidebar;
+  background-color: #eee;
+  color:black;
+  max-height: 500px;
+}
+
+#filtragem {
+  height: 100%;
+  width: 100%;
+}
+
+#filtragem input {
+  height: 30px;
+  border: dashed 1px;
+  border-radius: 5px;
+  padding: 12px, 20px;
+  color: black;
+  
+}

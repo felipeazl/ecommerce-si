@@ -1,0 +1,24 @@
+#container-produtos{
+  grid-area: produtosarea;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: grid;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+.posts {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 100ms ease-in-out;
+}
+.posts:hover {
+  transform: scale(1.02);
+}
+.posts img {
+  max-width: 100%;
+}
+.content {
+  padding: 10px;
+  text-align: center;
+}
+.content i {
+  font-size: 2rem;
+}
