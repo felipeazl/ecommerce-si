@@ -8,17 +8,28 @@
 .posts {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: transform 100ms ease-in-out;
+  border-radius: 10px;
 }
 .posts:hover {
   transform: scale(1.02);
 }
-.posts img {
-  max-width: 100%;
-}
 .content {
+  background-color: white;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
 }
 .content i {
   font-size: 2rem;
+  cursor: pointer;
+}
+.bg {
+  width: 100%;
+  background-color: #E5E5E5;
+  max-width: 100%;
+  border-radius: 10px;
+}
+.bg img{
+  margin-left: 2rem;
+  max-width: 100%;
 }

@@ -3,7 +3,7 @@
 	grid-gap: 10px;
 	font-family: "Inter", sans-serif;
 	/* max-width: 1300px; */
-	min-width: 350px;
+	min-width: 900px;
 }
 .container > * {
 	padding: 0.5em;

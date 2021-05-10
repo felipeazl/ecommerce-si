@@ -19,7 +19,9 @@ async function start() {
     container.innerHTML +=
       `<div class="posts">
           <div class="post">
-            <img class="produto-image" src="${produto.prod_image}" alt="${produto.title}">
+            <div class="bg">  
+              <img class="produto-image" src="${produto.prod_image}" alt="${produto.title}">
+            <div/>
             <div class="content">
               <h2>${produto.title}</h2>
               <p>R$ ${produto.price}</p>
