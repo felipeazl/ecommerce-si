@@ -1,7 +1,12 @@
 let container = document.getElementById('container-produtos')
 let listPedidos = document.getElementById('cart')
+let dropDownProdList = document.getElementById('inside-cart')
+
 try {
-  listPedidos.setAttribute('data-totalitems', `${JSON.parse(localStorage.getItem('order_id')).length}`)
+  let total = `${JSON.parse(localStorage.getItem('order_id')).length}`
+  listPedidos.setAttribute('data-totalitems', total)
+  
+  dropDownProdList.setAttribute('data-totalitems', total)
 } catch (error) {
   console.error(error)
 }
@@ -70,8 +75,8 @@ function calcularCompra(totalPedidos) {
   let num = totalPedidos.length
   listPedidos.setAttribute('data-totalitems', `${num}`)
 
-  // for (let i = 0; i < totalPedidos.length; i++) {
-  //   const element = totalPedidos[i];
-  //   console.log(element)
-  // }
+  
+  let totalProduts = JSON.parse(localStorage.getItem('order_id'))
+  dropDownProdList.setAttribute('data-totalitems', totalProduts.length)
+
 }

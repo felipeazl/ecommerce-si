@@ -55,11 +55,13 @@
   right:20px;
   width:40px;
   height:40px;
-  background:#292d48;
+  background:#111111;
   display:flex;
   align-items:center;
   justify-content:center;
-  border-radius:5px;
+  border-radius:10px;
+  cursor: pointer;
+
 }
 #carrinho .cart i {
   font-size:20px;
@@ -73,7 +75,7 @@
     position:absolute;
     top:-12px;
     right:-12px;
-    background:#2bd156;
+    background:red;
     line-height:24px;
     padding:0 5px;
     height:24px;
