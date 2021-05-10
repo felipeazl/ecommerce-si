@@ -1,7 +1,7 @@
 let container = document.getElementById('container-produtos')
 let listPedidos = document.getElementById('cart')
 try {
-  listPedidos.setAttribute('data-totalitems', `${JSON.parse(localStorage.getItem('order_id')).length}`)  
+  listPedidos.setAttribute('data-totalitems', `${JSON.parse(localStorage.getItem('order_id')).length}`)
 } catch (error) {
   console.error(error)
 }
@@ -22,7 +22,7 @@ async function start() {
             <img class="produto-image" src="${produto.prod_image}" alt="${produto.title}">
             <div class="content">
               <h2>${produto.title}</h2>
-              <p>${produto.price}</p>
+              <p>R$ ${produto.price}</p>
               <div id="addCart" onclick="shopping(${t})"><i class="fas fa-plus-circle"></i></div>
             </div>
           </div>
@@ -69,7 +69,7 @@ function calcularCompra(totalPedidos) {
 
   let num = totalPedidos.length
   listPedidos.setAttribute('data-totalitems', `${num}`)
-  
+
   // for (let i = 0; i < totalPedidos.length; i++) {
   //   const element = totalPedidos[i];
   //   console.log(element)
