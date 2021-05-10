@@ -17,16 +17,16 @@ async function start() {
   let t = 0
   for (const produto of produtos) {
     container.innerHTML +=
-      `<div class="posts">
-          <div class="post">
-            <img class="produto-image" src="${produto.prod_image}" alt="${produto.title}">
-            <div class="content">
-              <h2>${produto.title}</h2>
-              <p>R$ ${produto.price}</p>
-              <div id="addCart" onclick="shopping(${t})"><i class="fas fa-plus-circle"></i></div>
-            </div>
+      `<div id="produto0${t}" class="posts">
+        <div class="post">
+          <img class="produto-image" src="${produto.prod_image}" alt="${produto.title}">
+          <div class="content">
+            <h2>${produto.title}</h2>
+            <p>R$ ${produto.price}</p>
+            <div id="addCart" onclick="shopping(${t})"><i class="fas fa-plus-circle"></i></div>
           </div>
-        </div>`
+        </div>
+      </div>`
     t++
   }
 }
