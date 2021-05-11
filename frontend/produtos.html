@@ -128,12 +128,13 @@
 
     <div id="menu-lateral">
       <div id="filtragem">
-        <label for="pesquisar-nome" class="labelFiltro">Pesquisar Produto</label>
+        <label for="pesquisar-nome" class="labelFiltro">Pesquisar Produto: </label>
         <input id="pesquisar-nome" placeholder="Pesquisar" class="filtro" onkeyup="pesquisar(this)">
 
-
+        <div class="tipo-filtro">
+          <label for="" id="filtrar-cor">Filtrar por Cor: </label> </br>
+        </div>
         <div class="filtro-cor">
-          <label for="" id="filtrar-cor">Filtrar por Cor</label> </br>
           <input type="checkbox" onclick="checkboxVerify(this)" id="cor-preto" class="filtro-checkbox">
           <label for="cor-preto" class="cor-nome"> Preto</label>
         </div>

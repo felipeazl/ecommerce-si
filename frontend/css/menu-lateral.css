@@ -1,7 +1,7 @@
 #menu-lateral {
   display: grid;
   grid-area: sidebar;
-  background-color: #eee;
+  background-color: #E5E5E5;
   color:black;
   max-height: 500px;
 }
@@ -12,10 +12,29 @@
 }
 
 #filtragem input {
+  margin-top: 10px;
   height: 30px;
-  border: dashed 1px;
+  border: solid 1px;
   border-radius: 5px;
   padding: 12px, 20px;
   color: black;
+}
+
+.tipo-filtro{
+ /* background-color: chartreuse; */
+ margin-top: 10px;
+}
+
+.filtro-cor{
+  display: flex;
+  /* background-color: aqua; */
+  height: 50px;
+  margin-top: 10px; 
   
+}
+.cor-nome{
+  /* background-color: red; */
+  width: 100%;
+  align-self: center;
+  justify-self: center;
 }
