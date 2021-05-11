@@ -22,6 +22,8 @@ function generateCartWithProdutcts() {
       for (let i = 0; i < totalProds.length; i++) {
         if (produto.desc.id === `${i + 1}`) {
           showTotal = produto
+          console.log(Number(produto.desc.prod_price).toFixed(2))
+          showTotal.desc.prod_price += produto.desc.prod_price
           showTotal.desc.quantidade += produto.desc.quantidade
           totalValueIdOne += Number(produto.desc.prod_price)
         }
