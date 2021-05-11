@@ -1,5 +1,5 @@
 .dropdown-cart {
-  opacity: 0;
+  display: none;
   position: absolute;
   margin-top: 54rem;
   right: -3.75rem;
@@ -13,8 +13,10 @@
 }
 
 .show-dropdown-cart {
+  display: block;
   opacity: 1;
   transition: 0.5s all ease;
+  cursor: default;
 }
 
 .cart-info {
