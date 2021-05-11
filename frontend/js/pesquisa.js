@@ -3,8 +3,7 @@ let produtos = document.getElementById('container-produtos')
 
 let arrayTeste = []
 let arrayProducts = []
-
-let isCheckboxCheked = false
+let checkBoxChecked = 0
 
 window.addEventListener('load', async () => {
   criarProdutos()
@@ -18,7 +17,7 @@ function criarProdutos() {
 }
 
 pesquisar = (prod) => {
-  if (isCheckboxCheked) {
+  if (checkBoxChecked > 0) {
 
     arrayTeste.filter(e => {
       let termoPesquisa = e.children.item(0).textContent.toUpperCase().includes(prod.value.toUpperCase())
@@ -56,17 +55,37 @@ const recriarLista = (cor, isChecked) => {
   produtos = document.getElementsByClassName(cor)
 
   if (isChecked) {
+    checkBoxChecked += 1
+    arrayProducts.filter(e => {
+      e.hidden = true
+    })
+
+
     for (const produto of produtos) {
       arrayTeste.push(produto)
     }
 
+
+    arrayTeste.filter(e => {
+      e.hidden = false
+    })
+
   } else {
+    checkBoxChecked -= 1
     for (let i = 0; i < arrayTeste.length; i++) {
       let q = arrayTeste[i].attributes.class.value.split(' ').includes(cor)
       if (q) {
+        if (checkBoxChecked > 0) {
+          arrayTeste[i].hidden = true
+        }
         arrayTeste.splice(i, 1)
         i -= 1
       }
+    }
+    if (checkBoxChecked === 0) {
+      arrayProducts.filter(e => {
+        e.hidden = false
+      })
     }
   }
 }
