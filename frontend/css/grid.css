@@ -7,9 +7,6 @@
     "header"
     "produtosarea";
   }
-  aside {
-    display: none;
-  }
 }
 
 @media (min-width: 650px) { 

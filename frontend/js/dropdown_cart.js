@@ -12,7 +12,14 @@ let userId = sessionStorage.getItem('client_id')
 
 let totalValueIdOne = 0
 let totalProds = Array(16)
-let showTotal = {}
+let showTotalArray = []
+
+let showTotalObj = {
+  'id': '',
+  'prod_price': '',
+  'prod_title': '',
+  'quantidade': '0'
+}
 
 function generateCartWithProdutcts() {
 
@@ -21,18 +28,32 @@ function generateCartWithProdutcts() {
 
       for (let i = 0; i < totalProds.length; i++) {
         if (produto.desc.id === `${i + 1}`) {
-          showTotal = produto
-          console.log(Number(produto.desc.prod_price).toFixed(2))
-          showTotal.desc.prod_price += produto.desc.prod_price
-          showTotal.desc.quantidade += produto.desc.quantidade
-          totalValueIdOne += Number(produto.desc.prod_price)
+          
+
+          if (showTotalObj.id in showTotalArray) {
+            
+            showTotalObj = {
+              id: produto.desc.id,
+              prod_title: produto.desc.prod_title,
+              quantidade: showTotalArray[i + 1].quantidade + 1,
+              prod_price: Number(produto.desc.prod_price) * showTotalArray[i + 1].quantidade,
+            }
+          } else {
+
+            showTotalObj = {
+              id: produto.desc.id,
+              prod_title: produto.desc.prod_title,
+              prod_price: produto.desc.prod_price,
+              quantidade: produto.desc.quantidade
+            }
+          }
+          showTotalArray[Number(produto.desc.id)] = showTotalObj
         }
       }
-
     }
   }
 
-  console.log(showTotal)
+  console.log(showTotalArray)
 }
 
 generateCartWithProdutcts()
