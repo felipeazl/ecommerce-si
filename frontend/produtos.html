@@ -51,64 +51,65 @@
             </div>
           </div>
           <!-- <img src="./images/shopping.png"> -->
-          
+
           <div id="cart" class="cart" data-totalitems="0" onclick="showDropdownCart()">
             <i class="fas fa-shopping-cart"></i>
 
 
 
             <div class="dropdown-cart" id="dropdown-cart">
-          
+
               <div class="cart-info">
                 <div id="inside-cart" class="inside-cart" data-totalitems="0"><i class="fas fa-shopping-cart"></i>
                 </div>
                 <div class="total">
-                  <span>Total: <p class="price"> $165.00</p></span>
+                  <span>Total: <p class="price" id="totalBuy">R$ 0.00</p></span>
 
                 </div>
               </div>
-              
-               <hr>
-              
-              <div class="cart-prodcuts"> 
+
+              <hr>
+
+              <div class="cart-prodcuts">
                 <!--  BATTLEFIELD  PURCHASE -->
                 <div class="cart-product">
-                    <div class="cart-img-product"> 
-                      <img src="https://i.ibb.co/xHH79vk/16.png"> 
+                  <div class="cart-img-product">
+                    <img src="https://i.ibb.co/xHH79vk/16.png">
+                  </div>
+                  <div class="cart-info-product">
+                    <h4>Battlefield 1</h4>
+                    <div class="cart-product-purchase">
+                      <p class="price">$60.00</p>
+                      <span> Quantity: 1 </span>
                     </div>
-                    <div class="cart-info-product"> 
-                      <h4>Battlefield 1</h4> 
-                      <div class="cart-product-purchase">
-                        <p class="price">$60.00</p>
-                        <span> Quantity: 1 </span>
-                       </div>
-                    </div>
+                  </div>
                 </div>
                 <!--  RED DEAD REDEMPTION 2 PURCHASE -->
                 <div class="cart-product">
-                    <div class="cart-img-product"> 
-                      <img src="https://images-na.ssl-images-amazon.com/images/I/81dKP%2BiFloL._AC_SL1500_.jpg"> 
+                  <div class="cart-img-product">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/81dKP%2BiFloL._AC_SL1500_.jpg">
+                  </div>
+                  <div class="cart-info-product">
+                    <h4>Red Dead Redemption 2</h4>
+                    <div class="cart-product-purchase">
+                      <p class="price">$55.00</p>
+                      <span> Quantity: 1 </span>
                     </div>
-                    <div class="cart-info-product"> 
-                      <h4>Red Dead Redemption 2</h4> 
-                      <div class="cart-product-purchase">
-                        <p class="price">$55.00</p>
-                        <span> Quantity: 1 </span>
-                       </div>
-                    </div>
-                </div>            
+                  </div>
+                </div>
                 <!--  UNCHARTED COLLECTION PURCHASE -->
                 <div class="cart-product">
-                    <div class="cart-img-product"> 
-                      <img src="https://media.playstation.com/is/image/SCEA/uncharted-the-nathan-drake-collection-boxart-two-column-01-ps4-us-03jun15?$TwoColumn_Image$"> 
+                  <div class="cart-img-product">
+                    <img
+                      src="https://media.playstation.com/is/image/SCEA/uncharted-the-nathan-drake-collection-boxart-two-column-01-ps4-us-03jun15?$TwoColumn_Image$">
+                  </div>
+                  <div class="cart-info-product">
+                    <h4>Uncharted Nathan Drake Collection</h4>
+                    <div class="cart-product-purchase">
+                      <p class="price">$50.00</p>
+                      <span> Quantity: 1 </span>
                     </div>
-                    <div class="cart-info-product"> 
-                      <h4>Uncharted Nathan Drake Collection</h4> 
-                      <div class="cart-product-purchase">
-                        <p class="price">$50.00</p>
-                        <span> Quantity: 1 </span>
-                       </div>
-                    </div>
+                  </div>
                 </div>
               </div>
               <hr>
@@ -128,13 +129,13 @@
     <div id="menu-lateral">
       <div id="filtragem">
         <label for="pesquisar-nome" class="labelFiltro">Pesquisar Produto</label>
-        <input id="pesquisar-nome"placeholder="Pesquisar" class="filtro" onkeyup="pesquisar(this)">
+        <input id="pesquisar-nome" placeholder="Pesquisar" class="filtro" onkeyup="pesquisar(this)">
 
 
         <div class="filtro-cor">
           <label for="" id="filtrar-cor">Filtrar por Cor</label> </br>
           <input type="checkbox" onclick="checkboxVerify(this)" id="cor-preto" class="filtro-checkbox">
-          <label for="cor-preto"class="cor-nome"> Preto</label>
+          <label for="cor-preto" class="cor-nome"> Preto</label>
         </div>
 
         <div class="filtro-cor">
@@ -161,9 +162,9 @@
 
   <footer>
     <div id="copyright">
-        <p id="copyright-text">Developed and Designed by TF&C ©</p>
+      <p id="copyright-text">Developed and Designed by TF&C ©</p>
     </div>
-</footer>
+  </footer>
 
   <script src="./js/script.js"></script>
   <script src="./js/shopping.js"></script>
