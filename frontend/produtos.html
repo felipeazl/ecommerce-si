@@ -11,13 +11,14 @@
   <link rel="stylesheet" href="./css/produtos.css">
   <link rel="stylesheet" href="./css/menu-lateral.css">
   <link rel="stylesheet" href="./css/dropdown.css">
+  <link rel="stylesheet" href="styles/footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/4d7495ab7e.js" crossorigin="anonymous"></script>
   <title>Produtos</title>
 </head>
 
-<body>
+<body style="margin: 0;">
 
   <div class="container">
     <header>
@@ -73,7 +74,7 @@
                 <!--  BATTLEFIELD  PURCHASE -->
                 <div class="cart-product">
                     <div class="cart-img-product"> 
-                      <img src="https://images-na.ssl-images-amazon.com/images/I/81zk93c4ZoL._AC_SL1500_.jpg"> 
+                      <img src="https://i.ibb.co/xHH79vk/16.png"> 
                     </div>
                     <div class="cart-info-product"> 
                       <h4>Battlefield 1</h4> 
@@ -127,39 +128,46 @@
     <div id="menu-lateral">
       <div id="filtragem">
         <label for="pesquisar-nome" class="labelFiltro">Pesquisar Produto</label>
-        <input id="pesquisar-nome" placeholder="Pesquisar" class="filtro" onkeyup="pesquisar(this)">
+        <input id="pesquisar-nome"placeholder="Pesquisar" class="filtro" onkeyup="pesquisar(this)">
 
 
         <div class="filtro-cor">
           <label for="" id="filtrar-cor">Filtrar por Cor</label> </br>
-          <input type="checkbox" id="cor-preto" class="filtro-checkbox">
-          <label for="cor-preto" class="cor-nome"> Preto</label>
+          <input type="checkbox" onclick="checkboxVerify(this)" id="cor-preto" class="filtro-checkbox">
+          <label for="cor-preto"class="cor-nome"> Preto</label>
         </div>
 
         <div class="filtro-cor">
-          <input type="checkbox" id="cor-vermelho" class="filtro-checkbox">
+          <input type="checkbox" onclick="checkboxVerify(this)" id="cor-vermelho" class="filtro-checkbox">
           <label for="cor-vermelho" class="cor-nome">Vermelho</label>
         </div>
 
         <div class="filtro-cor">
-          <input type="checkbox" id="cor-azul" class="filtro-checkbox">
+          <input type="checkbox" onclick="checkboxVerify(this)" id="cor-azul" class="filtro-checkbox">
           <label for="cor-azul" class="cor-nome">Azul</label>
         </div>
 
         <div class="filtro-cor">
-          <input type="checkbox" id="cor-rosa" class="filtro-checkbox">
+          <input type="checkbox" onclick="checkboxVerify(this)" id="cor-rosa" class="filtro-checkbox">
           <label for="cor-rosa" class="cor-nome">Rosa</label>
+        </div>
+        <div class="filtro-cor">
+          <input type="checkbox" onclick="checkboxVerify(this)" id="cor-branco" class="filtro-checkbox">
+          <label for="cor-branco" class="cor-nome">Branco</label>
         </div>
       </div>
     </div>
   </div>
 
+  <footer>
+    <div id="copyright">
+        <p id="copyright-text">Developed and Designed by TF&C ©</p>
+    </div>
+</footer>
+
   <script src="./js/script.js"></script>
   <script src="./js/shopping.js"></script>
-<<<<<<< HEAD
-=======
   <script src="./js/dropdown_cart.js"></script>
->>>>>>> 8d13a6a9922e0eab74270bc5ee7af6516c49b0bf
   <script src="./js/pesquisa.js"></script>
 </body>
 

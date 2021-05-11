@@ -1,40 +1,12 @@
 footer {
-    width: 100%;
-    height: 220px;
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;
     background: #111111;
+    width: 100%;
     color: white;
     float: left;
-}
-footer a:visited {
-    color: white;
-}
-#f-menu {
-    width: 50%;
-    float: left;
-    margin-top: 15vh;
-}
-#f-menu ul {
-    list-style:none;
-}
-#f-menu li {
-    display: inline;
-}
-#f-menu ul li a {
-    font-size: 20px;
-    padding: 0px 20px;
-    text-decoration: none;
-}
-#pagamento{
-    width: 50%;
-    float: right;
-    text-align: center;
-}
-#pagamento img{
-    margin-top: 5vh;
-    width: 50vh;
 }
 #copyright {
-    margin-top: -5vh;
     margin-left: 25%;
     width: 50%;
     height: 20%;

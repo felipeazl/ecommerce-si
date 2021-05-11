@@ -22,9 +22,11 @@ async function start() {
   let t = 0
   for (const produto of produtos) {
     container.innerHTML +=
-      `<div id="produto0${t}" class="posts">
+      `<div id="produto${t + 1}" class="posts ${produto.color}">
         <div class="post">
+        <div class="bg">
           <img class="produto-image" src="${produto.prod_image}" alt="${produto.title}">
+        <div/>
           <div class="content">
             <h2>${produto.title}</h2>
             <p>R$ ${produto.price}</p>

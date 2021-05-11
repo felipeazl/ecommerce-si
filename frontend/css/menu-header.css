@@ -2,7 +2,9 @@
   display: grid;
   gap: 10px;
   min-width: 350px;
-
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+  color: black;
 }
 
 #logo {
@@ -40,12 +42,6 @@
 
 #carrinho {
   grid-area: shoppingcart;
-}
-
-#carrinho img {
-  padding-top: 10px;
-  padding-left: 50%;
-  width: 25px;
 }
 
 #carrinho .cart {

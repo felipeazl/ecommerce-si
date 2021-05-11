@@ -10,51 +10,119 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="-1" />
-    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="./css/menu-header.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/cadastrar-entrar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/4d7495ab7e.js" crossorigin="anonymous"></script>
     <script src="./js/form.js"></script>
 </head>
 
-<body>
-    <header>
-        <nav id="menu">
-            <div id="logo">
+<body style="font-family: 'Inter', sans-serif;">
+    <div>
+        <header>
+            <div id="wrapper-menu">
+              <!-- menu mobile -->
+              <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+              </div>
+              <div id="logo">
                 <a href="/frontend/index.html">
-                    <img class="logo" src="images/logo.png">
+                  <img class="logo" src="./images/logo.png">
                 </a>
-            </div>
-
-            <div id="user">
+              </div>
+              <div id="top-menu">
                 <ul>
-                    <li id="menu-cadastro-entrar">
-                        <a href="/frontend/cadastrar-entrar.html">Cadastrar | Entrar</a>
-                    </li>
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="produtos.html">Produtos</a>
+                  </li>
+                  <li>
+                    <a href="contato.html">FAQ</a>
+                  </li>
                 </ul>
-            </div>
-
-            <div id="navegacao">
-                <div id="itens-menu">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="produtos.html">Produtos</a>
-                        </li>
-                        <li>
-                            <a href="contato.html">FAQ</a>
-                        </li>
-                    </ul>
+              </div>
+              <div id="carrinho">
+                <div id="user-form">
+                  <div id="user">
+                  </div>
                 </div>
-                <div id="carrinho">
-                    <a>
-                        <img id="img-carrinho" src="images/shopping.png">
-                    </a>
+                <!-- <img src="./images/shopping.png"> -->
+                
+                <div id="cart" class="cart" data-totalitems="0" onclick="showDropdownCart()">
+                  <i class="fas fa-shopping-cart"></i>
+      
+      
+      
+                  <div class="dropdown-cart" id="dropdown-cart">
+                
+                    <div class="cart-info">
+                      <div id="inside-cart" class="inside-cart" data-totalitems="0"><i class="fas fa-shopping-cart"></i>
+                      </div>
+                      <div class="total">
+                        <span>Total: <p class="price"> $165.00</p></span>
+      
+                      </div>
+                    </div>
+                    
+                     <hr>
+                    
+                    <div class="cart-prodcuts"> 
+                      <!--  BATTLEFIELD  PURCHASE -->
+                      <div class="cart-product">
+                          <div class="cart-img-product"> 
+                            <img src="https://i.ibb.co/xHH79vk/16.png"> 
+                          </div>
+                          <div class="cart-info-product"> 
+                            <h4>Battlefield 1</h4> 
+                            <div class="cart-product-purchase">
+                              <p class="price">$60.00</p>
+                              <span> Quantity: 1 </span>
+                             </div>
+                          </div>
+                      </div>
+                      <!--  RED DEAD REDEMPTION 2 PURCHASE -->
+                      <div class="cart-product">
+                          <div class="cart-img-product"> 
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81dKP%2BiFloL._AC_SL1500_.jpg"> 
+                          </div>
+                          <div class="cart-info-product"> 
+                            <h4>Red Dead Redemption 2</h4> 
+                            <div class="cart-product-purchase">
+                              <p class="price">$55.00</p>
+                              <span> Quantity: 1 </span>
+                             </div>
+                          </div>
+                      </div>            
+                      <!--  UNCHARTED COLLECTION PURCHASE -->
+                      <div class="cart-product">
+                          <div class="cart-img-product"> 
+                            <img src="https://media.playstation.com/is/image/SCEA/uncharted-the-nathan-drake-collection-boxart-two-column-01-ps4-us-03jun15?$TwoColumn_Image$"> 
+                          </div>
+                          <div class="cart-info-product"> 
+                            <h4>Uncharted Nathan Drake Collection</h4> 
+                            <div class="cart-product-purchase">
+                              <p class="price">$50.00</p>
+                              <span> Quantity: 1 </span>
+                             </div>
+                          </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <button id="checkout"> Finalizar Compra </button>
+                  </div>
+      
+      
+      
                 </div>
+              </div>
             </div>
-        </nav>
-    </header>
+          </header>
+    
 
     <div id="tela-formulario">
         <div id="cadastrar">
@@ -89,7 +157,9 @@
             </form>
         </div>
     </div>
-
+    <script src="./js/script.js"></script>
+    <script src="./js/shopping.js"></script>
+    <script src="./js/dropdown_cart.js"></script>
 </body>
 
 </html>

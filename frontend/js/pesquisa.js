@@ -1,110 +1,72 @@
 let pesquisar_nome = document.getElementById('pesquisar-nome')
-
 let produtos = document.getElementById('container-produtos')
-let checkbox_preto = document.getElementById("cor-preto")
-let checkbox_vermelho = document.getElementById("cor-vermelho")
-let checkbox_azul = document.getElementById("cor-azul")
-let checkbox_rosa = document.getElementById("cor-rosa")
-let copyProdutos
 
+let arrayTeste = []
 let arrayProducts = []
 
-let que = window.addEventListener('load', () => {
+let isCheckboxCheked = false
 
+window.addEventListener('load', async () => {
+  criarProdutos()
+})
+
+function criarProdutos() {
   for (let i = 0; i < produtos.children.length; i++) {
     arrayProducts.push(produtos.children.item(i))
+
   }
+}
 
-  function listaProdutos() {
-    for (let i = 0; i < copyProdutos.length; i++) {
-      copyProdutos.item(i).hidden = true
-    }
-    for (let i = 0; i < produtos.length; i++) {
-      arrayProducts.push(produtos.item(i))
-      produtos.item(i).hidden = false
-    }
-  }
+pesquisar = (prod) => {
+  if (isCheckboxCheked) {
 
-  pesquisa = (prod) => {
+    arrayTeste.filter(e => {
+      let termoPesquisa = e.children.item(0).textContent.toUpperCase().includes(prod.value.toUpperCase())
+      if (termoPesquisa) {
+        e.hidden = false
 
+        return e
+      }
+      e.hidden = true
+      return e;
+    })
+  } else {
     arrayProducts.filter(e => {
-      let termoPesquisa = e.children[1].textContent.toUpperCase().includes(prod.value.toUpperCase())
+      let termoPesquisa = e.children.item(0).textContent.toUpperCase().includes(prod.value.toUpperCase())
+
       if (termoPesquisa) {
         e.hidden = false
         return e
       }
       e.hidden = true
-      return e
+      return e;
     })
   }
+}
 
-  checkbox_preto.addEventListener('click', function () {
-    if (!checkbox_preto.checked) {
-      copyArrayProducts = arrayProducts
-      copyProdutos = produtos
-      produtos = document.getElementsByClassName("produto")
-      arrayProducts = []
-      listaProdutos()
-      return;
+function checkboxVerify(props) {
+  recriarLista(props.id.split('-')[1], props.checked)
+  isCheckboxCheked = props.checked
+}
+
+function removerPreto() {
+
+}
+const recriarLista = (cor, isChecked) => {
+  produtos = document.getElementsByClassName(cor)
+
+  if (isChecked) {
+    for (const produto of produtos) {
+      arrayTeste.push(produto)
     }
-    copyArrayProducts = arrayProducts
-    copyProdutos = produtos
-    produtos = document.getElementsByClassName("preto")
-    arrayProducts = []
-    listaProdutos()
-  })
 
-  checkbox_vermelho.addEventListener('click', function () {
-    if (!checkbox_vermelho.checked) {
-      copyArrayProducts = arrayProducts
-      copyProdutos = produtos
-      produtos = document.getElementsByClassName("produto")
-      arrayProducts = []
-      listaProdutos()
-      return;
+  } else {
+    for (let i = 0; i < arrayTeste.length; i++) {
+      let q = arrayTeste[i].attributes.class.value.split(' ').includes(cor)
+      if (q) {
+        arrayTeste.splice(i, 1)
+        i -= 1
+      }
     }
-    copyArrayProducts = arrayProducts
-    copyProdutos = produtos
-    produtos = document.getElementsByClassName("vermelho")
-    arrayProducts = []
-    listaProdutos()
-      (arrayProducts)
-  })
-
-  checkbox_azul.addEventListener('click', function () {
-    if (!checkbox_azul.checked) {
-      copyArrayProducts = arrayProducts
-      copyProdutos = produtos
-      produtos = document.getElementsByClassName("produto")
-      arrayProducts = []
-      listaProdutos()
-      return;
-    }
-    copyArrayProducts = arrayProducts
-    copyProdutos = produtos
-    produtos = document.getElementsByClassName("azul")
-    arrayProducts = []
-    listaProdutos()
-  })
-
-  checkbox_rosa.addEventListener('click', function () {
-    if (!checkbox_rosa.checked) {
-      copyArrayProducts = arrayProducts
-      copyProdutos = produtos
-      produtos = document.getElementsByClassName("produto")
-      arrayProducts = []
-      listaProdutos()
-      return;
-    }
-    copyArrayProducts = arrayProducts
-    copyProdutos = produtos
-    produtos = document.getElementsByClassName("rosa")
-    arrayProducts = []
-    listaProdutos()
-  })
-  return arrayProducts;
-})
-
-const pesquisar = (props) => {
-  console.log(props)
+  }
 }
