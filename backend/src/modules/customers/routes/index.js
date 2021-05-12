@@ -10,7 +10,7 @@ import loginAccountLimiter from '../../../shared/http/middlewares/rateLimit'
 
 const customersRoute = express.Router()
 
-customersRoute.get('/getData', getData)
+customersRoute.get('/getdata', getData)
 
 customersRoute.post('/signup', celebrate({
   [Segments.BODY]: {

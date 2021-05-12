@@ -1,7 +1,9 @@
 import { compare, hash } from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
-import { resolve } from 'path'
+import { produtos } from '../../../database/produtos.js'
+
+const json = './produtos.json'
 
 import { notFound } from '../../../shared/errors/index'
 import Customer from '../models/customer'
@@ -78,9 +80,5 @@ export const customerLogin = async (req, res) => {
 
 export const getData = async (req, res) => {
 
-    const { t } = req.body
-
-    const data = await fetch(resolve(__dirname, '..', '..', '..', 'database', 'produtos.json'))
-
-    return res.status(200).json(data)
+    return res.status(200).json(produtos)
   }
