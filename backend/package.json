@@ -7,8 +7,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/app.js",
     "lint": "eslint ./",
-    "start": "NODE_ENV=production babel-node src/app.js",
-    "fire": "nodemon --exec babel-node src/shared/http/firebase/index.js"
+    "start": "babel-node src/app.js"
   },
   "dependencies": {
     "@babel/cli": "^7.10.4",

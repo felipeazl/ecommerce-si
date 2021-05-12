@@ -18,7 +18,7 @@ try {
 let orders = {}
 
 async function start() {
-  let response = await fetch('http://localhost:3000/customers/getdata')
+  let response = await fetch('http://ecommercesi.herokuapp.com/customers/getdata')
 
   let json = await response.json()
 
@@ -46,7 +46,7 @@ start()
 
 async function shopping(index) {
 
-  let response = await fetch('http://localhost:3000/customers/getdata')
+  let response = await fetch('http://ecommercesi.herokuapp.com/customers/getdata')
 
   let json = await response.json()
 

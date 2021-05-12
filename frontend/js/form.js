@@ -1,5 +1,5 @@
 const authenticateUser = async () => {
-  let url = 'http://localhost:3000/customers/login'
+  let url = 'http://ecommercesi.herokuapp.com/customers/login'
 
   let email = document.getElementById('email-entrar').value
   let password = document.getElementById('senha-entrar').value
@@ -28,7 +28,7 @@ const authenticateUser = async () => {
     if (Object.keys(response)[0] !== 'id') {
       return document.getElementById('retorno').innerHTML = 'Wrong Password'
     }
-    let url_authenticated = 'http://localhost:3000/authenticated'
+    let url_authenticated = 'http://ecommercesi.herokuapp.com/authenticated'
 
     myStorage = window.sessionStorage
     myStorage.setItem('name', response.name);
@@ -49,7 +49,7 @@ const authenticateUser = async () => {
 
 const createUser = async () => {
 
-  let url = 'http://localhost:3000/customers/signup'
+  let url = 'http://ecommercesi.herokuapp.com/customers/signup'
 
 
   let name = document.getElementById('nome-cadastrar').value
@@ -86,7 +86,7 @@ const createUser = async () => {
       myStorage.setItem('client_id', res[0].id);
       myStorage.setItem('token', res[0].token);
 
-      let url_authenticated = 'http://localhost:3000/authenticated'
+      let url_authenticated = 'http://ecommercesi.herokuapp.com/authenticated'
       await fetch(url_authenticated, {
         method: 'GET',
         headers: {
