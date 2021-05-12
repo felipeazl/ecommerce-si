@@ -95,7 +95,7 @@ const createUser = async () => {
           'authorization': `Bearer ${res[0].token}`
         },
       }).then((value) => {
-        window.location.href = value.url
+        window.location.href = value.url.split('/')[3]
       }).catch(err => console.error(err))
     })
     .catch(err => console.error(err))
