@@ -1,20 +1,12 @@
 import { compare, hash } from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
+import { resolve } from 'path'
 
 import { notFound } from '../../../shared/errors/index'
 import Customer from '../models/customer'
 
 dotenv.config()
-
-export const updateLastLogin = async (email) => {
-  const customer = await Customer.findOne({ email })
-  if (customer) {
-    customer.lastLogin = new Date()
-    await customer.save()
-  }
-}
-
 
 export const createCustomer = async (req, res) => {
   const { name, email, password } = req.body
@@ -71,7 +63,6 @@ export const customerLogin = async (req, res) => {
       error: 'Wrong password'
     })
   }
-  updateLastLogin(customer.email)
   const token = jwt.sign({}, process.env.CUSTOMER_KEY, { subject: customer.id, expiresIn: '1d' })
 
   return res.status(200).json({
@@ -82,3 +73,14 @@ export const customerLogin = async (req, res) => {
     token
   })
 }
+
+
+
+export const getData = async (req, res) => {
+
+    const { t } = req.body
+
+    const data = await fetch(resolve(__dirname, '..', '..', '..', 'database', 'produtos.json'))
+
+    return res.status(200).json(data)
+  }

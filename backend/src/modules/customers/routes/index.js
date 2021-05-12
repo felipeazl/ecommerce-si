@@ -5,10 +5,12 @@ import {
   Segments
 } from 'celebrate'
 
-import { createCustomer, customerLogin } from '../controllers/customer'
+import { createCustomer, customerLogin, getData } from '../controllers/customer'
 import loginAccountLimiter from '../../../shared/http/middlewares/rateLimit'
 
 const customersRoute = express.Router()
+
+customersRoute.get('/getData', getData)
 
 customersRoute.post('/signup', celebrate({
   [Segments.BODY]: {
