@@ -7,7 +7,8 @@
       "color": "vermelho",
       "prod_image": "https://i.ibb.co/yg0nFWz/1.png",
       "price": "899,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Esta versão retrô combina tons clássicos inspirados na história do tênis."
     },
     {
       "id": "2",
@@ -15,7 +16,8 @@
       "color": "vermelho",
       "prod_image": "https://i.ibb.co/4sLcwp3/2.png",
       "price": "799,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Original icônico com linhas de design modernas e amortecimento super leve."
     },
     {
       "id": "3",
@@ -23,7 +25,8 @@
       "color": "vermelho",
       "prod_image": "https://i.ibb.co/QkjHYq3/3.png",
       "price": "12999,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "As primeiras sapatilhas de basquetebol com tecnologia Air."
     },
     {
       "id": "4",
@@ -31,7 +34,8 @@
       "color": "azul",
       "prod_image": "https://i.ibb.co/pLbHT84/4.png",
       "price": "599,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Inspirado no elemento da tabela periódica Césio 55"
     },
     {
       "id": "5",
@@ -39,7 +43,8 @@
       "color": "azul",
       "prod_image": "https://i.ibb.co/kJz7m6k/5.png",
       "price": "499,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Renove seu look com o Nike Air Force 1 React."
     },
     {
       "id": "6",
@@ -47,7 +52,8 @@
       "color": "rosa",
       "prod_image": "https://i.ibb.co/g3sCSHk/6.png",
       "price": "999,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "O Dunk deixou sua marca nas quadras como um tênis de basquete"
     },
     {
       "id": "7",
@@ -55,7 +61,8 @@
       "color": "azul",
       "prod_image": "https://i.ibb.co/sFb5YzH/7.png",
       "price": "899,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Jordan 34, feito para você mostrar seu potencial."
     },
     {
       "id": "8",
@@ -63,7 +70,8 @@
       "color": "rosa",
       "prod_image": "https://i.ibb.co/BgjkRCR/8.png",
       "price": "599,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "É um tênis leve e estável projetado para ajudar atletas."
     },
     {
       "id": "9",
@@ -71,7 +79,8 @@
       "color": "preto",
       "prod_image": "https://i.ibb.co/qBRfkcy/9.png",
       "price": "799,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Com a tecnologia Air de amortecimento visível."
     },
     {
       "id": "10",
@@ -79,7 +88,8 @@
       "color": "preto",
       "prod_image": "https://i.ibb.co/wh9YHRQ/10.png",
       "price": "599,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Foi projetado com a intenção de ser disruptivo."
     },
     {
       "id": "11",
@@ -87,7 +97,8 @@
       "color": "preto",
       "prod_image": "https://i.ibb.co/FKhNTRd/11.png",
       "price": "449,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "A unidade Max Air mais ousada da história da marca."
     },
     {
       "id": "12",
@@ -95,7 +106,8 @@
       "color": "preto",
       "prod_image": "https://i.ibb.co/cr9ZSKT/12.png",
       "price": "999,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Com um sistema único de amortecimento composto."
     },
     {
       "id": "13",
@@ -103,7 +115,8 @@
       "color": "preto",
       "prod_image": "https://i.ibb.co/Kj3htmy/13.png",
       "price": "999,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Preparado para o futuro com o seu novo amortecimento."
     },
     {
       "id": "14",
@@ -111,7 +124,8 @@
       "color": "branco",
       "prod_image": "https://i.ibb.co/6stpr28/14.png",
       "price": "1800,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Prepare-se para o seu próximo melhor desempenho pessoal."
     },
     {
       "id": "15",
@@ -119,7 +133,8 @@
       "color": "rosa",
       "prod_image": "https://i.ibb.co/dt75WNY/15.png",
       "price": "499,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Com o visual da icônica série animada, Bob Esponja."
     },
     {
       "id": "16",
@@ -127,7 +142,8 @@
       "color": "azul",
       "prod_image": "https://i.ibb.co/xHH79vk/16.png",
       "price": "3600,00",
-      "quantity": 20
+      "quantity": 20,
+      "desc": "Com um design inspirado na corrida."
     }
   ]
 }

@@ -1,4 +1,5 @@
 const dropdown_cart = document.getElementById('dropdown-cart');
+const cart = document.getElementById('cart');
 let cartProduct = document.getElementsByClassName('cart-product')
 
 
