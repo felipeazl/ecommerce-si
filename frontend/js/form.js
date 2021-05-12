@@ -35,6 +35,7 @@ const authenticateUser = async () => {
     myStorage.setItem('client_id', response.id);
     myStorage.setItem('token', response.token);
 
+    console.log(url_authenticated)
     await fetch(url_authenticated, {
       method: 'GET',
       headers: {
@@ -42,7 +43,7 @@ const authenticateUser = async () => {
         'authorization': `Bearer ${response.token}`
       },
     }).then((value) => {
-      window.location.href = value.url
+      window.location.href = value.url.split('/')[3]
     }).catch(err => console.error(err))
   }).catch(err => console.error(err))
 }
@@ -57,7 +58,7 @@ const createUser = async () => {
   let password = document.getElementById('senha-cadastrar').value
   let passwordConfirmation = document.getElementById('confirm-cadastrar').value
 
-  let validEmail = new RegExp('\S+@\S+\.\S+')
+  let validEmail = new RegExp('\\S+@\\S+\\.\\S+')
 
   if (!validEmail.test(email)) {
     return document.getElementById('cadastro-report').innerHTML = 'Email inválido'
