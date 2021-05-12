@@ -127,13 +127,13 @@
         <div id="cadastrar">
             <form action="/cadastrar">
                 <label for="nome-cadastrar" class="labelCadastrar">Nome Completo</label>
-                <input type="text" id="nome-cadastrar" class="inputCadastrar" required>
+                <input type="text" id="nome-cadastrar" class="inputCadastrar" required onkeydown="if (event.keyCode == 13) { createUser(); return false; }">
                 <label for="email-cadastrar" class="labelCadastrar">Email</label>
-                <input type="text" id="email-cadastrar" class="inputCadastrar" required>
+                <input type="text" id="email-cadastrar" class="inputCadastrar" required onkeydown="if (event.keyCode == 13) { createUser(); return false; }">
                 <label for="senha-cadastrar" class="labelCadastrar">Criar Senha</label>
-                <input type="password" id="senha-cadastrar" class="inputCadastrar" required>
+                <input type="password" id="senha-cadastrar" class="inputCadastrar" required onkeydown="if (event.keyCode == 13) { createUser(); return false; }">
                 <label for="confirm-cadastrar" class="labelCadastrar">Confirmar Senha</label>
-                <input type="password" id="confirm-cadastrar" class="inputCadastrar" required>
+                <input type="password" id="confirm-cadastrar" class="inputCadastrar" required onkeydown="if (event.keyCode == 13) { createUser(); return false; }">
                 <input type="button" value="CADASTRAR" id="botao-cadastrar" onclick="createUser()">
                 <p id="cadastro-report" style="text-align: center;"></p>
             </form>
@@ -148,9 +148,9 @@
 
             <form action="/costumers/login" method="post">
                 <label for="email-entrar" class="labelEntrar">Email</label>
-                <input type="text" id="email-entrar" class="inputEntrar" required>
+                <input type="text" id="email-entrar" class="inputEntrar" required onkeydown="if (event.keyCode == 13) { authenticateUser(); return false; }">
                 <label for="senha-entrar" class="labelEntrar">Senha</label>
-                <input type="password" id="senha-entrar" class="inputEntrar" required>,
+                <input type="password" id="senha-entrar" class="inputEntrar" required onkeydown="if (event.keyCode == 13) { authenticateUser(); return false; }">,
                 <input type="button" value="ENTRAR" id="botao-entrar" onclick="authenticateUser()">
                 <p id="retorno" style="text-align: center;"></p>
             </form>
