@@ -1,19 +1,23 @@
 #menu-lateral {
   display: grid;
+  position: sticky;
+  top: 120px;
+  height: 50vh;
   grid-area: sidebar;
   background-color: #E5E5E5;
   color:black;
-  max-height: 500px;
+  margin-top: 130px;
+  border-radius: 1em;
 }
 
 #filtragem {
   height: 100%;
+  position: relative;
   width: 100%;
 }
 
 #filtragem input {
-  margin-top: 10px;
-  height: 30px;
+  height: 25px;
   border: solid 1px;
   border-radius: 5px;
   padding: 12px, 20px;
@@ -22,18 +26,19 @@
 
 .tipo-filtro{
  /* background-color: chartreuse; */
- margin-top: 10px;
+ margin-top: 20px;
 }
 
 .filtro-cor{
   display: flex;
   /* background-color: aqua; */
-  height: 50px;
+  height: 30px;
   margin-top: 10px; 
   
 }
 .cor-nome{
   /* background-color: red; */
+  padding-left: 2px;
   width: 100%;
   align-self: center;
   justify-self: center;

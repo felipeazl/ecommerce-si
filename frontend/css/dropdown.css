@@ -2,7 +2,7 @@
   display: none;
   position: absolute;
   margin-top: 40rem;
-  right: -3.75rem;
+  right: -2.75rem;
   background: #FFF;
   border: 1px solid #111111;
   width: 20rem;
@@ -10,6 +10,10 @@
   border-radius: 10px;
   transition: 0.5s all ease;
   font-family: 'Inter', sans-serif;
+}
+
+.cart {
+  border-radius: 10px;
 }
 
 .show-dropdown-cart {

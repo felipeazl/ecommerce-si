@@ -4,6 +4,7 @@
 }
 
 .image-center {
+  	margin-top: 20px;
   width: 95%;
   height: auto;
   margin: 0 auto;
@@ -16,8 +17,10 @@
 #center-image {
   width: 100%;
   height: auto;
+  margin-top: 130px;
 }
 .img1 {
+  	margin-top: 20px;
     width: 1600px;
     height: 900px;
     margin-top: 20px;
@@ -25,6 +28,7 @@
 .imgtxt {
     position: absolute;
     font-size: 32px;
+    margin-top: 130px;
     font-family: sans-serif;
     text-align: center;
     color: white;

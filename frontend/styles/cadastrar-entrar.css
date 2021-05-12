@@ -1,4 +1,6 @@
-
+header {
+    position: relative !important;
+}
 #tela-formulario {
     width: 100%;
     height: 100%;

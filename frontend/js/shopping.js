@@ -30,12 +30,13 @@ async function start() {
       `<div id="produto${t + 1}" class="posts ${produto.color}">
         <div class="post">
         <div class="bg">
-          <img class="produto-image" src="${produto.prod_image}" alt="${produto.title}">
+          <img class="produto-image" src="${produto.prod_image}" title="${produto.desc}" alt="${produto.title}">
         <div/>
           <div class="content">
             <h2>${produto.title}</h2>
             <p>R$ ${produto.price}</p>
-            <div onclick="shopping(${t})"><i class="fas fa-plus-circle"></i></div>
+            <div>
+            <button class='botao-comprar' onclick="shopping(${t})">Comprar</button>
           </div>
         </div>
       </div>`
