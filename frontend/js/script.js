@@ -30,3 +30,18 @@ const authenticated = async () => {
 }
 
 document.addEventListener('DOMContentLoaded', authenticated)
+
+function finalizarCompra() {
+  let session
+
+  try {
+    session = sessionStorage.getItem("client_id")
+  } catch (error) {
+    return
+  }
+  if(!session){
+    window.location.href = "cadastrar-entrar.html"
+    return
+  }
+  window.location.href = "finalizar-compra.html"
+}

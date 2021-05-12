@@ -1,7 +1,7 @@
 .dropdown-cart {
   display: none;
   position: absolute;
-  margin-top: 54rem;
+  top: 45px;
   right: -2.75rem;
   background: #FFF;
   border: 1px solid #111111;

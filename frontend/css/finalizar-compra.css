@@ -1,0 +1,115 @@
+.conteudo {
+    margin-top: 40px;
+    margin-left: 10%;
+    width: 80%;
+}
+#titulo {
+    font-weight: 400;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+#forma-de-pagamento {
+    margin-top: 80px;
+    font-weight: 400;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+.column {
+    float: left;
+    width: 60%;
+    margin-top: 5px;
+    margin-left: 20%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.produto-img {
+    width: 120px;
+    background: #e5e5e5e5;
+    float: left;
+    border-radius: 10px;
+}
+.produto-titulo {
+    float: left;
+    margin-left: 5%;
+    width: 60%;
+}
+.produto-qntd-lb {
+    float: left;
+    margin-left: 5%;
+    font-weight: 600;
+}
+.produto-qntd {
+    float: left;
+    margin-left: 2%;
+}
+.produto-add {
+    float: right;
+    margin-right: 2%;
+    cursor: pointer;
+}
+.produto-add:hover {
+    color: rgb(114, 228, 0);
+}
+.produto-rm {
+    float: right;
+    margin-right: 2%;
+    cursor: pointer;
+}
+.produto-rm:hover {
+    color: rgb(192, 0, 0)
+}
+
+.column-pagamento {
+    cursor: pointer;
+    float: left;
+    width: 50%;
+    margin-top: 5px;
+    margin-left: 25%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+}
+.pagamento-img {
+    width: 120px;
+    background: #e5e5e5e5;
+    float: left;
+    border-radius: 10px;
+}
+.pagamento-titulo {
+    font-weight: 400;
+    float: left;
+    margin-left: 5%;
+    padding-top: 25px;
+    width: 60%;
+}
+.pagamento-check {
+    margin-top: 50px;
+    width: 20px;
+    height: 20px;
+}
+#finalizar-compra {
+    width: 100%;
+    float: left;
+}
+#botao-finalizar-compra {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 40px;
+    margin-bottom: 5%;
+    height: 40px;
+    float: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
