@@ -8,32 +8,40 @@ function showDropdownCart() {
 }
 
 
-let totalProdutcs = JSON.parse(localStorage.getItem('order_id'))
+let totalProdutcs;
 let userId = sessionStorage.getItem('client_id')
 
-let totalValueIdOne = 0
-let totalProds = Array(16)
-let showTotal = {}
+let showTotalArray = []
 
-function generateCartWithProdutcts() {
-
-  for (let produto of totalProdutcs) {
-    if (produto.client_id === userId) {
-
-      for (let i = 0; i < totalProds.length; i++) {
-        if (produto.desc.id === `${i + 1}`) {
-          showTotal = produto
-          console.log(Number(produto.desc.prod_price).toFixed(2))
-          showTotal.desc.prod_price += produto.desc.prod_price
-          showTotal.desc.quantidade += produto.desc.quantidade
-          totalValueIdOne += Number(produto.desc.prod_price)
-        }
-      }
-
-    }
-  }
-
-  console.log(showTotal)
+let showTotalObj = {
+  'id': '',
+  'prod_price': '',
+  'prod_title': '',
+  'quantidade': '0'
 }
 
-generateCartWithProdutcts()
+function generateCartWithProdutcts() {
+  setTimeout(function () {
+    totalProdutcs = JSON.parse(localStorage.getItem('order_id'))
+    showProds(totalProdutcs)
+  }, 100)
+  const showProds = (totalProds) => {
+
+    totalProds.filter((item, i) => {
+      
+      if (totalProds[i].desc.id in totalProds) {
+        console.log('não deveria cair aqui')
+        return;
+      } else {
+        return generateOProductsObj(totalProds[i], totalProds[i].desc.id - 1)
+      }
+
+    })
+  }
+}
+
+function generateOProductsObj(prodObject, i) {
+
+  showTotalArray[Number(i)] = prodObject
+  console.log(showTotalArray)
+}
