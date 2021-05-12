@@ -2,203 +2,163 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="imagem/png" href="images/logo.png" />
-    <title>Acessar</title>
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="-1" />
-    <link rel="stylesheet" href="./css/finalizar-compra.css">
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/menu-header.css">
-    <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/menu-lateral.css">
-    <link rel="stylesheet" href="./css/dropdown.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fontawesome.com/icons/plus?style=solid">
-    <link rel="stylesheet" href="https://fontawesome.com/icons/minus?style=solid">
-    <script src="https://kit.fontawesome.com/4d7495ab7e.js" crossorigin="anonymous"></script>
-    <script src="./js/form.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="imagem/png" href="images/logo.png" />
+  <title>Acessar</title>
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <link rel="stylesheet" href="./css/finalizar-compra.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/menu-header.css">
+  <link rel="stylesheet" href="./css/grid.css">
+  <link rel="stylesheet" href="./css/menu-lateral.css">
+  <link rel="stylesheet" href="./css/dropdown.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fontawesome.com/icons/plus?style=solid">
+  <link rel="stylesheet" href="https://fontawesome.com/icons/minus?style=solid">
+  <script src="https://kit.fontawesome.com/4d7495ab7e.js" crossorigin="anonymous"></script>
+  <script src="./js/form.js"></script>
 </head>
 
 <body style="font-family: 'Inter', sans-serif;" id="cadastro-page">
-    <div>
-        <header>
-            <div id="wrapper-menu">
-              <!-- menu mobile -->
-              <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-              </div>
-              <div id="logo">
-                <a href="/frontend/index.html">
-                  <img class="logo" src="./images/logo.png">
-                </a>
-              </div>
-              <div id="top-menu">
-                <ul>
-                  <li>
-                    <a href="index.html">Home</a>
-                  </li>
-                  <li>
-                    <a href="produtos.html">Produtos</a>
-                  </li>
-                  <li>
-                    <a href="contato.html">FAQ</a>
-                  </li>
-                </ul>
-              </div>
-              <div id="carrinho">
-                <div id="user-form">
-                  <div id="user">
-                  </div>
+  <div>
+    <header>
+      <div id="wrapper-menu">
+        <!-- menu mobile -->
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div id="logo">
+          <a href="/frontend/index.html">
+            <img class="logo" src="./images/logo.png">
+          </a>
+        </div>
+        <div id="top-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="produtos.html">Produtos</a>
+            </li>
+            <li>
+              <a href="contato.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div id="carrinho">
+          <div id="user-form">
+            <div id="user">
+            </div>
+          </div>
+          <!-- <img src="./images/shopping.png"> -->
+
+          <div id="cart" class="cart" data-totalitems="0" onclick="showDropdownCart()">
+            <i class="fas fa-shopping-cart"></i>
+
+
+
+            <div class="dropdown-cart" id="dropdown-cart">
+
+              <div class="cart-info">
+                <div id="inside-cart" class="inside-cart" data-totalitems="0"><i class="fas fa-shopping-cart"></i>
                 </div>
-                <!-- <img src="./images/shopping.png"> -->
-                
-                <div id="cart" class="cart" data-totalitems="0" onclick="showDropdownCart()">
-                  <i class="fas fa-shopping-cart"></i>
-      
-      
-      
-                  <div class="dropdown-cart" id="dropdown-cart">
-                
-                    <div class="cart-info">
-                      <div id="inside-cart" class="inside-cart" data-totalitems="0"><i class="fas fa-shopping-cart"></i>
-                      </div>
-                      <div class="total">
-                        <span>Total: <p class="price" id="totalBuy"> $0.00</p></span>
-      
-                      </div>
-                    </div>                    
-                     <hr>
-                      <div class="cart-product">
-                          <div class="cart-img-product"> 
-                            <img src="https://i.ibb.co/xHH79vk/16.png"> 
-                          </div>
-                          <div class="cart-info-product"> 
-                            <h4>Produto Exemplo</h4> 
-                            <div class="cart-product-purchase">
-                              <p class="price">$60.00</p>
-                              <span> Quantity: 1 </span>
-                             </div>
-                          </div>
-                      </div>           
-                    <hr>
-                    <button id="checkout" onclick="finalizarCompra()"> Finalizar Compra </button>
+                <div class="total">
+                  <span>Total: <p class="price" id="totalBuy"> $0.00</p></span>
+
+                </div>
+              </div>
+              <hr>
+              <div class="cart-product">
+                <div class="cart-img-product">
+                  <img src="https://i.ibb.co/xHH79vk/16.png">
+                </div>
+                <div class="cart-info-product">
+                  <h4>Produto Exemplo</h4>
+                  <div class="cart-product-purchase">
+                    <p class="price">$60.00</p>
+                    <span> Quantity: 1 </span>
                   </div>
                 </div>
               </div>
+              <hr>
+              <button id="checkout" onclick="finalizarCompra()"> Finalizar Compra </button>
             </div>
-          </header>
-
-        <div class="container"></div>
-
-        <div class="conteudo">
-            <h1 id="titulo">Finalizar Compra</h1>
-            <div class="row">
-                <div class="column">
-                    <div>
-                        <img class="produto-img" src="images/produtos/1.png" alt="">
-                        <h2 class="produto-titulo">Jordan</h2>
-                    </div>
-                    <div>
-                        <label class="produto-qntd-lb" for="quantidade">Quantidade:</label>
-                        <label class="produto-qntd" for="produto-quantidade">100</label>
-                        <i class="produto-rm fas fa-minus"></i>
-                        <i class="produto-add fas fa-plus"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="column">
-                    <div>
-                        <img class="produto-img" src="images/produtos/1.png" alt="">
-                        <h2 class="produto-titulo">Jordan</h2>
-                    </div>
-                    <div>
-                        <label class="produto-qntd-lb" for="quantidade">Quantidade:</label>
-                        <label class="produto-qntd" for="produto-quantidade">100</label>
-                        <i class="produto-rm fas fa-minus"></i>
-                        <i class="produto-add fas fa-plus"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="column">
-                    <div>
-                        <img class="produto-img" src="images/produtos/1.png" alt="">
-                        <h2 class="produto-titulo">Jordan</h2>
-                    </div>
-                    <div>
-                        <label class="produto-qntd-lb" for="quantidade">Quantidade:</label>
-                        <label class="produto-qntd" for="produto-quantidade">100</label>
-                        <i class="produto-rm fas fa-minus"></i>
-                        <i class="produto-add fas fa-plus"></i>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+    </header>
 
-        <h2 id="forma-de-pagamento">Formas de Pagamento</h2>
+    <div class="container"></div>
 
-        <div class="conteudo">
-            <form action="">
-                <label for="boleto">
-                    <div class="column-pagamento">
-                        <div>
-                            <img class="pagamento-img" src="images/fatura.png" alt="">
-                            <h2 class="pagamento-titulo">Boleto</h2>
-                        </div>
-                        <div>
-                            <input type="radio" class="pagamento-check" name="pagamento-check" id="boleto" checked />
-                        </div>
-                    </div>
-                </label>
-
-                <label for="credito">
-                    <div class="column-pagamento">
-                        <div>
-                            <img class="pagamento-img" src="images/cartao-de-credito.png" alt="">
-                            <h2 class="pagamento-titulo">Cartão de Crédito</h2>
-                        </div>
-                        <div>
-                            <input type="radio" class="pagamento-check" name="pagamento-check" id="credito" />
-                        </div>
-                    </div>
-                </label>  
-
-                <label for="debito">
-                    <div class="column-pagamento">
-                        <div>
-                            <img class="pagamento-img" src="images/cartao-de-credito.png" alt="">
-                            <h2 class="pagamento-titulo">Débito</h2>
-                        </div>
-                        <div>
-                            <input type="radio" class="pagamento-check" name="pagamento-check" id="debito" value="debito" />
-                        </div>
-                    </div>
-                </label>        
-            </form>
-            <div id="finalizar-compra">
-                <button id="botao-finalizar-compra" onclick="alert('Compra realizada com sucesso.'); localStorage.removeItem('order_id');window.location.href = 'produtos.html'">Finalizar Comprar</button>
-            </div>
-        </div>
+    <h1 id="titulo">Finalizar Compra</h1>
+    <div class="conteudo" id="conteudo">
+      
     </div>
 
+    <h2 id="forma-de-pagamento">Formas de Pagamento</h2>
 
-    <footer>
-        <div id="copyright">
-            <p id="copyright-text">Developed and Designed by TF&C ©</p>
-        </div>
-    </footer>
-    <script src="./js/script.js"></script>
-    <script src="./js/shopping.js"></script>
-    <script src="./js/dropdown_cart.js"></script>
+    <div class="conteudo">
+      <form action="">
+        <label for="boleto">
+          <div class="column-pagamento">
+            <div>
+              <img class="pagamento-img" src="images/fatura.png" alt="">
+              <h2 class="pagamento-titulo">Boleto</h2>
+            </div>
+            <div>
+              <input type="radio" class="pagamento-check" name="pagamento-check" id="boleto" checked />
+            </div>
+          </div>
+        </label>
+
+        <label for="credito">
+          <div class="column-pagamento">
+            <div>
+              <img class="pagamento-img" src="images/cartao-de-credito.png" alt="">
+              <h2 class="pagamento-titulo">Cartão de Crédito</h2>
+            </div>
+            <div>
+              <input type="radio" class="pagamento-check" name="pagamento-check" id="credito" />
+            </div>
+          </div>
+        </label>
+
+        <label for="debito">
+          <div class="column-pagamento">
+            <div>
+              <img class="pagamento-img" src="images/cartao-de-credito.png" alt="">
+              <h2 class="pagamento-titulo">Débito</h2>
+            </div>
+            <div>
+              <input type="radio" class="pagamento-check" name="pagamento-check" id="debito" value="debito" />
+            </div>
+          </div>
+        </label>
+      </form>
+      <div id="finalizar-compra">
+        <button id="botao-finalizar-compra"
+          onclick="alert('Compra realizada com sucesso.'); localStorage.removeItem('order_id');window.location.href = 'produtos.html'">Finalizar
+          Comprar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div id="copyright">
+      <p id="copyright-text">Developed and Designed by TF&C ©</p>
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>
+  <script src="./js/shopping.js"></script>
+  <script src="./js/dropdown_cart.js"></script>
+  <script src="./js/finalizar-compra.js"></script>
 </body>
 
 </html>

@@ -34,8 +34,7 @@ const authenticateUser = async () => {
     myStorage.setItem('name', response.name);
     myStorage.setItem('client_id', response.id);
     myStorage.setItem('token', response.token);
-
-    console.log(url_authenticated)
+    
     await fetch(url_authenticated, {
       method: 'GET',
       headers: {

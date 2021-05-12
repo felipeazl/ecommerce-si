@@ -64,6 +64,7 @@ async function shopping(index) {
       'id': produto[index].id,
       'prod_title': produto[index].title,
       'prod_price': produto[index].price.replaceAll(',', '.'),
+      'prod_image': produto[index].prod_image,
       'quantidade': 1,
     }
   }

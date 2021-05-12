@@ -20,7 +20,6 @@ const authenticated = async () => {
     }
   })
   if (auth.url.split('/')[3] !== 'index.html') {
-    console.log('here')
     window.sessionStorage.clear()
     return formUser.innerHTML = "<ul>  <li id='menu-cadastro-entrar'> <a href='cadastrar-entrar.html'>Cadastrar | Entrar</a> </li></ul>";
   }
