@@ -1,6 +1,6 @@
 let formUser = document.getElementById('user')
 
-formUser.innerHTML = "<ul> <li id='menu-cadastro-entrar'> <a href='/frontend/cadastrar-entrar.html'>Cadastrar | Entrar</a> </li></ul>"
+formUser.innerHTML = "<ul> <li id='menu-cadastro-entrar'> <a href='cadastrar-entrar.html'>Cadastrar | Entrar</a> </li></ul>"
 
 const authenticated = async () => {
 
@@ -19,9 +19,10 @@ const authenticated = async () => {
       'authorization': `Bearer ${token}`
     }
   })
-  if (auth.url !== 'http://127.0.0.1:5500/frontend/') {
+  if (auth.url.split('/')[3] !== 'index.html') {
+    console.log('here')
     window.sessionStorage.clear()
-    return formUser.innerHTML = "<ul>  <li id='menu-cadastro-entrar'> <a href='/frontend/cadastrar-entrar.html'>Cadastrar | Entrar</a> </li></ul>";
+    return formUser.innerHTML = "<ul>  <li id='menu-cadastro-entrar'> <a href='cadastrar-entrar.html'>Cadastrar | Entrar</a> </li></ul>";
   }
   formUser.innerHTML = `<ul>  <li id='menu-cadastro-entrar'> Bem-vindo, ${name.split(' ')[0]}! <a href="#" onclick="window.sessionStorage.clear() 
     window.location.reload()"> Sair </a> </li></ul>`
